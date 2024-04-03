@@ -1,2 +1,5 @@
 # Colmeia-Cubo
-Projeto do NPI.
+
+Repositório do projeto.
+
+[Documentação](docs/readme.md)
