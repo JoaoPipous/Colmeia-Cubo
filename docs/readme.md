@@ -6,3 +6,5 @@
 
 - [Workflow (AS-IS)](workflow_asis.md)
 
+- [Especificação Suplementar](especificacao_suplementar.md)
+
