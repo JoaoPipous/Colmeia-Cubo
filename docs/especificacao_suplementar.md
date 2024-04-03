@@ -6,6 +6,11 @@
 | ---- | ------ | --------- | ----- |
 | 03/04/2024 | 1.0 | Criação do documento | João Vitor Deliberador  
 
+| Data | Versão | Descrição | Autor |
+| ---- | ------ | --------- | ----- |
+| 03/04/2024 | 1.5 | Finalizando documento | João Vitor Deliberador  
+
+
 ## Índice
 
 1. [Introdução](#introdução)
