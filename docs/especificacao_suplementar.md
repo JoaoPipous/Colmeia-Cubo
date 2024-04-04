@@ -100,29 +100,32 @@ Consultar o [glossário](glossario.md).
 
 ### Visão Geral
 
-As sessões abaixo detalham os requisitos do sistema, informações que não foram possíveis de identificar somente com os diagramas, sendo eles: Funcionalidade; utilidade; confiabilidade; desempenho; suportabilidade; restrições de design; documentação do usuário on-line e requisitos do sistema de ajuda; componentes comprados; interfaces; requisitos de licença; observações legais, sobre direitos autorais e outras observações; padrões aplicaveis.
+As sessões a seguir abordam os requisitos cruciais do sistema, fornecendo detalhes que não foram completamente discerníveis apenas pelos diagramas. Incluem funcionalidades essenciais, utilidade para os usuários, garantia de confiabilidade, otimização de desempenho, suporte contínuo, restrições de design, documentação online para usuários, requisitos de assistência do sistema, componentes adquiridos, interfaces, exigências de licenciamento, considerações legais e observações sobre padrões aplicáveis.
 
 ## Funcionalidade
 
-Os requisitos funcionais do projeto estão disponíveis no [diagrama de caso de uso](diagramas/caso_de_uso.png).
+Os requisitos funcionais do projeto estão disponíveis no [diagrama de caso de uso](caso_de_uso.md)
 
 ## Utilidade
 
 ### Treinamento
 
-E
+Requer pouco nivel de treinamento para o usuario administrativo 
 
 ## Confiabilidade
 
 ### Disponibilidade
 
-O sistema deve estar disponivel 24/7.
+O sistema precisa estar disponivel 24/7.
 
 ### Exatidão
 
-
+O Sistema precisa ser perfeito nos resultados sem espaço para falhas
 
 ### Taxa de Erros ou Defeitos
+
+- Erro crítico: Perda de informações.
+- Erro padrão : Instabilidade do Servidor, Falha ao realizar downloads 
 
 
 
@@ -130,25 +133,30 @@ O sistema deve estar disponivel 24/7.
 
 ### Capacidade
 
+O sistema precisa ter a capacidade de armazenar uma grande quantidade de informações e dados(COLMEIA) dos usuários e ter a capacidade de permitir atualizacoes downloads devarios dos usuários utilizando o sistema ao mesmo tempo.
+
 
 
 ## Suportabilidade
 
 ### Padrão de Codificação
 
-
+Um padrão de codificação de login no [InertiaJS](https://inertiajs.com/), usando o framework [Laravel](https://laravel.com/) no backend e [Vue.js](https://vuejs.org/) no frontend
 
 ## Restrições de Design
 
 ### Logo e Cores
 
+O Sistema devera seguir o padrao de cores estabelecido pela UniFil, seguindo oque já esta em uso pela COLMEIA CUBO
+
 
 ### Liguagem de Programação
 
+O Sistema sera desenvolvido usando [InertiaJS](https://inertiajs.com/)
 
 ## Documentação do Usuário On-line e Requisitos do Sistema de Ajuda
 
-O sistema conterá uma documentação on-line.
+Toda documentação do projeto sera on-line.
 
 ## Componentes Comprados
 
@@ -174,7 +182,7 @@ Não se aplica.
 
 ## Observações Legais, sobre Direitos Autorais e Outras Observações
 
-O sistema terá as observações legais de acordo com os padrões da instituição UniFil.
+O sistema seguira as observações legais de acordo com os padrões da instituição UniFil.
 
 ## Padrões Aplicáveis
 
