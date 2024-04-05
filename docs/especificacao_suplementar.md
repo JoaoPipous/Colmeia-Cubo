@@ -8,68 +8,43 @@
 
 | Data | Versão | Descrição | Autor |
 | ---- | ------ | --------- | ----- |
-| 03/04/2024 | 1.5 | Finalizando documento | João Vitor Deliberador  
+| 05/04/2024 | 1.0 | Finalizando documento | João Vitor Deliberador  
 
 
 ## Índice
 
-1. [Introdução](#introdução)
-
-    1. [Objetivo](#objetivo)
-
-    2. [Escopo](#escopo)
-
-    3. [Definições, Acrônimos e Abreviações](#definições-acrônimos-e-abreviações)
-
-    4. [Referências](#referências)
-
-    5. [Visão Geral](#visão-geral)
-
-2. [Funcionalidade](#funcionalidade)
-
-3. [Utilidade](#utilidade)
-
-     1. [Treinamento](#treinamento)
-
-4. [Confiabilidade](#confiabilidade)
-
-    1. [Disponibilidade](#disponibilidade)
-
-    2. [Exatidão](#exatidão)
-
-    3. [Taxa de Erros ou Defeitos](#taxa-de-erros-ou-defeitos)
-
-5. [Desempenho](#desempenho)
-
-    1. [Capacidade](#capacidade)
-
-6. [Suportabilidade](#suportabilidade)
-
-    1. [Padrão de Codificação](#padrão-de-codificação)
-
-7. [Restrições de Design](#restrições-de-design)
-
-    1. [Logo e Cores](#logo-e-cores)
-
-    2. [Liguagem de Programação](#liguagem-de-programação)
-
-8. [Documentação do Usuário On-line e Requisitos do Sistema de Ajuda](#documentação-do-usuário-on-line-e-requisitos-do-sistema-de-ajuda)
-
-9. [Componentes Comprados](#componentes-comprados)
-
-10. [Interfaces](#interfaces)
-
-    1. [Interfaces de Hardware](#interfaces-de-hardware)
-
-    2. [Interfaces de Software](#interfaces-de-software)
-
-    3. [Interfaces de Comunicações](#interfaces-de-comunicações)
-
-11. [Requisitos de Licença](#requisitos-de-licença)
-
-12. [Observações Legais, sobre Direitos Autorais e Outras Observações](#observações-legais-sobre-direitos-autorais-e-outras-observações)
-
-13. [Padrões Aplicáveis](#padrões-aplicáveis)
+- [Especificação Suplementar  Projeto de Análises Clínicas  Versão 1.0](#especificação-suplementar--projeto-de-análises-clínicas--versão-10)
+  - [Histórico da Revisão](#histórico-da-revisão)
+  - [Índice](#índice)
+  - [Introdução](#introdução)
+    - [Objetivo](#objetivo)
+    - [Escopo](#escopo)
+    - [Definições, Acrônimos e Abreviações](#definições-acrônimos-e-abreviações)
+    - [Referências](#referências)
+    - [Visão Geral](#visão-geral)
+  - [Funcionalidade](#funcionalidade)
+  - [Utilidade](#utilidade)
+    - [Treinamento](#treinamento)
+  - [Confiabilidade](#confiabilidade)
+    - [Disponibilidade](#disponibilidade)
+    - [Exatidão](#exatidão)
+    - [Taxa de Erros ou Defeitos](#taxa-de-erros-ou-defeitos)
+  - [Desempenho](#desempenho)
+    - [Capacidade](#capacidade)
+  - [Suportabilidade](#suportabilidade)
+    - [Padrão de Codificação](#padrão-de-codificação)
+  - [Restrições de Design](#restrições-de-design)
+    - [Logo e Cores](#logo-e-cores)
+    - [Liguagem de Programação](#liguagem-de-programação)
+  - [Documentação do Usuário On-line e Requisitos do Sistema de Ajuda](#documentação-do-usuário-on-line-e-requisitos-do-sistema-de-ajuda)
+  - [Componentes Comprados](#componentes-comprados)
+  - [Interfaces](#interfaces)
+    - [Interfaces de Hardware](#interfaces-de-hardware)
+    - [Interfaces de Software](#interfaces-de-software)
+    - [Interfaces de Comunicações](#interfaces-de-comunicações)
+  - [Requisitos de Licença](#requisitos-de-licença)
+  - [Observações Legais, sobre Direitos Autorais e Outras Observações](#observações-legais-sobre-direitos-autorais-e-outras-observações)
+  - [Padrões Aplicáveis](#padrões-aplicáveis)
 
 ## Introdução
 
@@ -96,6 +71,9 @@ Consultar o [glossário](glossario.md).
 
 ### Referências
 
+Referencias sobre de como funciona o sistema na [Colmeia Cubo](https://unifil.br/cubo/?gad_source=1&gclid=CjwKCAjwwr6wBhBcEiwAfMEQs4mK5Gn8KfnDKVVKQ3hREByNX-xMn-cLw11YgXeQgpXMniL1ehGcpRoC6LgQAvD_BwE)
+
+[Yggdrasil2](https://akafts.github.io/yggdrasil2/) é um sistema parecido onde estao sendo tirados referencias
 
 
 ### Visão Geral
@@ -160,25 +138,32 @@ Toda documentação do projeto sera on-line.
 
 ## Componentes Comprados
 
-Não se aplica.
+N/A
 
 ## Interfaces
 
 ### Interfaces de Hardware
 
-Em análise.
+O hardware do sistema (servidor) deve conseguir processar as diversas
+requisições a API feitas pelos usuários simultaneamente e respondê-las
+eficientemente sem que haja atraso e ainda garantir a consistência da base de
+dados.
 
 ### Interfaces de Software
 
-Em análise.
+O sistema deve utilizar tecnologias de linguagens e frameworks pertencentes a
+um paradigma que favoreça a solução do problema, visando eficiência no
+desenvolvimento e fácil manutenção.
 
 ### Interfaces de Comunicações
 
-Em análise.
+O sistema deve possuir uma interface de comunicação que permita que as
+diversas requisições no sistema sejam realizadas eficientemente simultaneamente
+sem perder a consistência da base de dados.
 
 ## Requisitos de Licença
 
-Não se aplica.
+Licença de uso seguindo os protocolos fornecidos pela instituiçao UniFil.
 
 ## Observações Legais, sobre Direitos Autorais e Outras Observações
 
