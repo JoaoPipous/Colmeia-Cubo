@@ -71,9 +71,9 @@ Consultar o [glossário](glossario.md).
 
 ### Referências
 
-Referencias sobre de como funciona o sistema na [Colmeia Cubo](https://unifil.br/cubo/?gad_source=1&gclid=CjwKCAjwwr6wBhBcEiwAfMEQs4mK5Gn8KfnDKVVKQ3hREByNX-xMn-cLw11YgXeQgpXMniL1ehGcpRoC6LgQAvD_BwE)
+Referências sobre como funciona o sistema na [Colmeia Cubo](https://unifil.br/cubo/?gad_source=1&gclid=CjwKCAjwwr6wBhBcEiwAfMEQs4mK5Gn8KfnDKVVKQ3hREByNX-xMn-cLw11YgXeQgpXMniL1ehGcpRoC6LgQAvD_BwE)
 
-[Yggdrasil2](https://akafts.github.io/yggdrasil2/) é um sistema parecido onde estao sendo tirados referencias
+[Yggdrasil2](https://akafts.github.io/yggdrasil2/) é um sistema parecido onde estao sendo tirados referências
 
 
 ### Visão Geral
@@ -98,39 +98,43 @@ O sistema precisa estar disponivel 24/7.
 
 ### Exatidão
 
-O Sistema precisa ser perfeito nos resultados sem espaço para falhas
+Colmeia gerada não pode ter disciplinas que nao fazem parte da area de conhecimento do Cursos
 
 ### Taxa de Erros ou Defeitos
 
-- Erro crítico: Perda de informações.
-- Erro padrão : Instabilidade do Servidor, Falha ao realizar downloads 
-
-
+- Erro crítico: Perda de informações. 
 
 ## Desempenho
 
 ### Capacidade
 
-O sistema precisa ter a capacidade de armazenar uma grande quantidade de informações e dados(COLMEIA) dos usuários e ter a capacidade de permitir atualizacoes downloads devarios dos usuários utilizando o sistema ao mesmo tempo.
-
+O sistema precisa ter a capacidade de armazenar uma grande quantidade de informações e dados(COLMEIA) dos usuários e ter a capacidade de permitir atualizacoes downloads de vários usuários utilizando o sistema ao mesmo tempo.
 
 
 ## Suportabilidade
 
 ### Padrão de Codificação
 
-Um padrão de codificação de login no [InertiaJS](https://inertiajs.com/), usando o framework [Laravel](https://laravel.com/) no backend e [Vue.js](https://vuejs.org/) no frontend
+- PHP:
+PSR-1 e PSR-2: Para estilo de codificação e padrões de nomenclatura.
+PSR-4: Para autoloading de classes seguindo o modelo MVC do Laravel.
+- JavaScript:
+Airbnb Style Guide: Adotado para convenções de código, incluindo sintaxe e boas práticas.
+ESLint: Utilizado para garantir a qualidade do código e conformidade com o estilo.
+- TypeScript:
+Microsoft TypeScript Guidelines: Para práticas recomendadas e estilo de codificação.
+Prettier: Empregado para formatar o código automaticamente.
 
 ## Restrições de Design
 
 ### Logo e Cores
 
-O Sistema devera seguir o padrao de cores estabelecido pela UniFil, seguindo oque já esta em uso pela COLMEIA CUBO
+O Sistema devera seguir o padrão de cores estabelecido pela UniFil, seguindo oque já esta em uso pela COLMEIA CUBO
 
 
 ### Liguagem de Programação
 
-O Sistema sera desenvolvido usando [InertiaJS](https://inertiajs.com/)
+O Sistema sera desenvolvido usando [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) e [Laravel](https://laravel.com/) no backend e [Vue.js](https://vuejs.org/) no frontend
 
 ## Documentação do Usuário On-line e Requisitos do Sistema de Ajuda
 
@@ -138,28 +142,21 @@ Toda documentação do projeto sera on-line.
 
 ## Componentes Comprados
 
-N/A
+Não se aplica.
 
 ## Interfaces
 
 ### Interfaces de Hardware
 
-O hardware do sistema (servidor) deve conseguir processar as diversas
-requisições a API feitas pelos usuários simultaneamente e respondê-las
-eficientemente sem que haja atraso e ainda garantir a consistência da base de
-dados.
+Não se aplica.
 
 ### Interfaces de Software
 
-O sistema deve utilizar tecnologias de linguagens e frameworks pertencentes a
-um paradigma que favoreça a solução do problema, visando eficiência no
-desenvolvimento e fácil manutenção.
+Não se aplica.
 
 ### Interfaces de Comunicações
 
-O sistema deve possuir uma interface de comunicação que permita que as
-diversas requisições no sistema sejam realizadas eficientemente simultaneamente
-sem perder a consistência da base de dados.
+Não se aplica.
 
 ## Requisitos de Licença
 

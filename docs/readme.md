@@ -1,5 +1,7 @@
 # Documentação do projeto de Estagio COLMEIA CUBO
 
+- [Cronograma](cronograma.md)
+
 - [Telas](telas.md)
 
 - [Caso de Uso](caso_de_uso.md)
