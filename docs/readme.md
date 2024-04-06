@@ -8,3 +8,7 @@
 
 - [Especificação Suplementar](especificacao_suplementar.md)
 
+- [Plano de Estagio](plano_estagio.md)
+
+- [Glossario](glossario.md)
+
