@@ -14,3 +14,5 @@
 
 - [Glossario](glossario.md)
 
+- [Especificação de Caso De Uso](docs/Especificação_de_Caso_de_Uso.md)
+

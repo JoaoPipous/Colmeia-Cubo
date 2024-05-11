@@ -13,7 +13,6 @@
 
 ## Índice
 
-- [Especificação Suplementar  Projeto de Análises Clínicas  Versão 1.0](#especificação-suplementar--projeto-de-análises-clínicas--versão-10)
   - [Histórico da Revisão](#histórico-da-revisão)
   - [Índice](#índice)
   - [Introdução](#introdução)
