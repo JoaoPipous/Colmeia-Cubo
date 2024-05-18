@@ -18,4 +18,7 @@
 
 - [Diagrama de Entidade e Relacionamento](DER.MD)
 
+- [Diagrama de Implantação](diagrama_de_implementacao.md)
+
 - [Especificação de Caso de Uso](especificacao_de_caso_uso.md)
+
