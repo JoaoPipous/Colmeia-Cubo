@@ -1,3 +1,7 @@
+# Diagrama de Entidade e Relacionamento(DER)
+
+```mermaid
+
 erDiagram
     ORIENTADOR {
         int ID

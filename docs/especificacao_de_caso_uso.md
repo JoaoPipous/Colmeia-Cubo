@@ -16,6 +16,7 @@
   - [Fluxo Básico de Eventos](#fluxo-básico-de-eventos) 
   - [Fluxo Principal](#fluxo-principal)
   - [Pós Condições](#pós-condições)
+  - [Informaçoes Adicionais](#informaçoes-adicionais)
 
 ### Breve Descrição:
 O caso de uso "Gerenciar Cursos" permite que os orientadores realizem operações de CRUD (Create, Read, Update, Delete) sobre os cursos oferecidos pela instituição, facilitando a organização e atualização do catálogo de cursos.
@@ -62,6 +63,11 @@ Fluxo Alternativo:
 
 Se o Cordenador cancelar a adição ou atualização de um curso, o sistema retorna à lista de cursos sem realizar nenhuma alteração.
 
+
+### Informaçoes Adicionais
+ - Caso de Uso
+ 
+![Alt text](img/casodeusoespecifico.png)
 
 
 [Voltar](readme.md)

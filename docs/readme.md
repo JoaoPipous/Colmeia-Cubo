@@ -13,7 +13,9 @@
 - [Plano de Estagio](plano_estagio.md)
 
 - [Glossario](glossario.md)
+    
+- [Diagrama De Classes](diagramadeclasse.md)
 
-- [Diagrama De Classe](diagramadeclasse.md)
+- [Diagrama de Entidade e Relacionamento](DER.MD)
 
 - [Especificação de Caso de Uso](especificacao_de_caso_uso.md)
