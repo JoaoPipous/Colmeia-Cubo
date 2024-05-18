@@ -14,5 +14,6 @@
 
 - [Glossario](glossario.md)
 
-- [Especificação de Caso de Uso](especificacao_de_caso_uso.md)
+- [Diagrama De Classe](diagramadeclasse.md)
 
+- [Especificação de Caso de Uso](especificacao_de_caso_uso.md)
