@@ -5,8 +5,10 @@
 - [CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO  JOÃO VITOR DELIBERADOR  PROJETO DA COLMEIA CUBO  Londrina  2024](#curso-de-bacharelado-em-ciência-da-computação--joão-vitor-deliberador--projeto-da-colmeia-cubo--londrina--2024)
   - [SUMÁRIO](#sumário)
   - [INTRODUÇÃO](#introdução)
+      - [Núcleo de Práticas em Informática (NPI)](#núcleo-de-práticas-em-informática-npi)
     - [PROPOSTA E OBJETIVOS](#proposta-e-objetivos)
       - [Objetivo Geral](#objetivo-geral)
+      - [](#)
     - [JUSTIFICATIVA](#justificativa)
   - [DIAGRAMA DE CASO DE USO](#diagrama-de-caso-de-uso)
   - [TELAS](#telas)
@@ -106,7 +108,7 @@ Na [Figura](#workflow-as-is-na-notação-bpmn) é representado O workflow BPMN "
 
 ### BANCO DE DADOS
 
- PostgreSQL, para gestão eficiente de grandes conjuntos de dados curriculares.
+ MySQL, para gestão eficiente de grandes conjuntos de dados curriculares.
 
  ### Ferramentas de Desenvolvimento
 
@@ -124,7 +126,9 @@ Na [Figura](#workflow-as-is-na-notação-bpmn) é representado O workflow BPMN "
 - Laravel: Este framework PHP será utilizado para construir a lógica do servidor, gerenciamento de banco de dados e autenticação de usuários. Laravel é conhecido por sua elegante sintaxe e por fornecer um robusto conjunto de ferramentas para acelerar o desenvolvimento de aplicações web seguras e escaláveis.
 - Laravel Sanctum: Para autenticação SPA, utilizaremos o Laravel Sanctum, que proporciona um sistema de autenticação simples e leve para SPAs e token-based APIs.
 - InertiaJS Server-Side: O lado do servidor do InertiaJS, integrado com Laravel, facilitará o envio de dados do servidor para o cliente sem necessidade de construir uma API REST ou GraphQL, simplificando o desenvolvimento e a manutenção do sistema.
-
+- Tailwind: Framework CSS utilitário altamente configurável que fornece classes de baixo nível diretamente utilizáveis no HTML. Ao invés de escrever estilos CSS personalizados, você utiliza classes predefinidas que se combinam para criar qualquer design desejado.
+- Alpine: é um framework JavaScript leve, que permite adicionar interatividade aos componentes do frontend sem a complexidade dos frameworks maiores como React ou Vue. É ideal para projetos onde a simplicidade e o desempenho são prioridades. 
+- Livewire: é um framework full-stack para Laravel que simplifica a construção de interfaces dinâmicas e reativas sem sair do conforto do PHP.
 ## CRONOGRAMA
 
 ![Cronograma](img/CronogramaEstagio.png)

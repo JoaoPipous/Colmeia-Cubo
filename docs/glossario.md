@@ -14,17 +14,27 @@
   - [Introdução](#introdução)
     - [Objetivo](#objetivo)
     - [Escopo](#escopo)
-    - [Referências](#referências)
     - [Visão Geral](#visão-geral)
   - [Definições](#definições)
     - [Educação](#educação)
+      - [Cubo](#cubo)
+      - [Matriz Curricular Cubo](#matriz-curricular-cubo)
+      - [Área de Conhecimento](#área-de-conhecimento)
+      - [Áreas Funcionais](#áreas-funcionais)
       - [Colmeia CUBO](#colmeia-cubo)
-      - [Unidade Curricular](#unidade-curricular)
+      - [UCS](#ucs)
       - [Carga Horária](#carga-horária)
     - [Tecnologia](#tecnologia)
       - [InertiaJS](#inertiajs)
       - [Vue.js](#vuejs)
       - [Laravel](#laravel)
+      - [Tailwind](#tailwind)
+      - [Alpine](#alpine)
+      - [Livewire](#livewire)
+      - [PHP](#php)
+      - [JavaScript](#javascript)
+      - [TypeScript](#typescript)
+    - [Referências](#referências)
 
 ## Introdução
 
@@ -92,6 +102,15 @@ As definições são categorizadas em Educação e Tecnologia, refletindo os pri
 #### Laravel
 
 > Framework PHP para desenvolvimento web que oferece uma sintaxe expressiva e elegante. Utilizado no back-end do projeto Colmeia CUBO para gerenciar o banco de dados, autenticação de usuários e lógica de negócios.
+
+#### Tailwind
+>Framework CSS utilitário altamente configurável que fornece classes de baixo nível diretamente utilizáveis no HTML. Ao invés de escrever estilos CSS personalizados, você utiliza classes predefinidas que se combinam para criar qualquer design desejado.
+
+#### Alpine
+>é um framework JavaScript leve, que permite adicionar interatividade aos componentes do frontend sem a complexidade dos frameworks maiores como React ou Vue. É ideal para projetos onde a simplicidade e o desempenho são prioridades. 
+
+#### Livewire
+> é um framework full-stack para Laravel que simplifica a construção de interfaces dinâmicas e reativas sem sair do conforto do PHP.
 
 #### PHP
 
