@@ -16,7 +16,7 @@
     
 - [Diagrama De Classes](diagramadeclasse.md)
 
-- [Diagrama de Entidade e Relacionamento](DER.MD)
+- [Diagrama de Entidade e Relacionamento](DER.md)
 
 - [Diagrama de Implantação](diagrama_de_implementacao.md)
 
