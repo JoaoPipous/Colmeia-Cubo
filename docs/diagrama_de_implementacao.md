@@ -1,26 +1,5 @@
-# Diagrama de Implantação
+## Diagrama de Implantação
 
-```mermaid
+![Diagrama](img/diagramas/diagramaimplantacao.png)
 
-graph TB
-    subgraph Client_SIDE
-        Navegador
-    end
-
-    subgraph Server [Servidor]
-        direction TB
-        subgraph Ubuntu [Ubuntu]
-            subgraph Apache
-                Laravel
-                php
-                MySQL
-            end
-            subgraph Node_JS
-                JavaScript
-                Vue_JS
-            end
-        end
-    end
-
-    Internet --> Client_SIDE
-    Client_SIDE -->|HTTP/HTTPS| Server
+[Voltar](readme.md)

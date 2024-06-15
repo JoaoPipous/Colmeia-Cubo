@@ -91,14 +91,6 @@ As definições são categorizadas em Educação e Tecnologia, refletindo os pri
 
 ### Tecnologia
 
-#### InertiaJS
-
-> Framework utilizado para criar uma interface de usuário semelhante a uma aplicação de página única (SPA) usando o Vue.js no front-end, sem necessidade de construir uma API separada, permitindo uma melhor integração com o Laravel no back-end.
-
-#### Vue.js
-
-> Framework progressivo para construção de interfaces de usuário. No contexto do projeto, é utilizado para desenvolver a parte front-end da plataforma Colmeia CUBO, criando uma experiência de usuário interativa e dinâmica.
-
 #### Laravel
 
 > Framework PHP para desenvolvimento web que oferece uma sintaxe expressiva e elegante. Utilizado no back-end do projeto Colmeia CUBO para gerenciar o banco de dados, autenticação de usuários e lógica de negócios.

@@ -134,7 +134,7 @@ O Sistema devera seguir o padrão de cores estabelecido pela UniFil, seguindo oq
 
 ### Liguagem de Programação
 
-O Sistema sera desenvolvido usando [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) e [Laravel](https://laravel.com/) [Laravel LiveWire](https://laravel-livewire.com/) no backend e [Tailwind](https://tailwindcss.com/), [Vue.js](https://vuejs.org/) no frontend
+O Sistema sera desenvolvido usando [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) e [Laravel](https://laravel.com/) [Laravel LiveWire](https://laravel-livewire.com/) no backend e [Tailwind](https://tailwindcss.com/), no frontend
 
 ## Documentação do Usuário On-line e Requisitos do Sistema de Ajuda
 
