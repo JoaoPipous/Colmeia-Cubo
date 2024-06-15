@@ -92,6 +92,7 @@ Na [Figura 3](#telas) é caso o aluno queria saber informaçoes sobre sua UC, Mo
   
 Na [Figura](#workflow-as-is-na-notação-bpmn) é representado O workflow BPMN "as is" representa o processo atual do sistema Colmeia CUBO antes das melhorias. Inicia-se com o login do usuário, seguido pela seleção de um curso e turma específica. O usuário então tem a opção de visualizar, editar ou publicar as informações da colmeia. Após a publicação ou edição, um link pode ser gerado para compartilhamento. O processo também inclui a possibilidade de baixar o conteúdo da colmeia. Este workflow simplifica a gestão curricular e facilita o acesso à informação para os usuários.
 
+
 ![WorkflowASIS](img/diagramas/as-is.png)
 
 ## RECURSOS E AMBIENTE DE DESENOVOLVIMENTO
