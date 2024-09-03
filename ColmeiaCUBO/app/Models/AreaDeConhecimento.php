@@ -7,13 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class UnidadeCurricular extends Model
+class AreaDeConhecimento extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'duration', 'status'];
+    protected $fillable = [
+        'name',
+        'color',
+        'curso_id'
+    ];
 
-    public function areaDeConhecimento(): HasMany
+    public function curso(): BelongsTo
+    {
+        return $this->belongsTo(Curso::class);
+    }
+
+    public function unidadesCurriculares(): HasMany
     {
         return $this->hasMany(PivotAcUc::class);
     }
