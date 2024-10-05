@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class AreaDeConhecimento extends Model
+
+class UC() extends Model
 {
     use HasFactory;
 
