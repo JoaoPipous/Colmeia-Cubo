@@ -25,8 +25,6 @@
       - [UCS](#ucs)
       - [Carga Horária](#carga-horária)
     - [Tecnologia](#tecnologia)
-      - [InertiaJS](#inertiajs)
-      - [Vue.js](#vuejs)
       - [Laravel](#laravel)
       - [Tailwind](#tailwind)
       - [Alpine](#alpine)
@@ -128,7 +126,7 @@ API? Disponivel em <https://aws.amazon.com/pt/what-is/api/>. Acesso 5 abril. 202
 
 Protocolos InertiaJS. Disponivel em <https://inertiajs.com/the-protocol>. Acesso 3 abril. 2024 
 
-Documentaçao Laravel. DIsponivel em <https://laravel.com/docs/11.x>. Acesso 5 abril. 2024
+Documentaçao Laravel. Disponivel em <https://laravel.com/docs/11.x>. Acesso 5 abril. 2024
 
 
 [Voltar](readme.md)
