@@ -1,23 +1,30 @@
 ```mermaid
 
 flowchart TD
-    A[Início] --> B[Login]
-    B --> C{Usuário Autenticado?}
-    C -->|Sim| D[Apresentar Cursos Disponíveis]
-    C -->|Não| E[Erro: Login Inválido]
+    subgraph Usuário Regular
+        A[Início] --> B[Selecionar Curso]
+        B --> C[Visualizar Informações do Curso]
+        C --> D[Visualizar UCs, ACs e Colmeia]
+        D --> E[Baixar PDF]
+    end
 
-    D --> F{Selecionar Curso?}
-    F -->|Sim| G[Selecionar Turma Automática]
-    F -->|Não| A[Retorna para Login]
+    subgraph Usuário Administrativo
+        F[Login ADM] --> G{Autenticação ADM Sucessiva?}
+        G -->|Sim| H[Acesso ao Painel de Controle]
+        G -->|Não| I[Erro: Login Inválido]
+        
+        H --> J[Gerenciar Cursos]
+        H --> K[Gerenciar Unidades Curriculares]
+        H --> L[Gerenciar Atividades Complementares]
 
-    G --> H[Visualizar Colmeia]
-    H --> I[Editar Colmeia]
-    I --> J{Publicar Colmeia?}
-    J -->|Sim| K[Publicar CUBO]
-    J -->|Não| L[Finalizar sem Publicação]
+        J --> M[Criar, Editar ou Excluir Cursos]
+        K --> N[Criar, Editar ou Excluir UCs]
+        L --> O[Criar, Editar ou Excluir ACs]
 
-    K --> M[Gerar Link Automaticamente]
-    M --> N[Notificar Usuário com Link]
-    N --> O[Processo Finalizado]
+        M --> P[Editar Colmeia CUBO]
+        P --> Q{Deseja Publicar Colmeia?}
+        Q -->|Sim| R[Publicar CUBO e Gerar Link]
+        Q -->|Não| S[Finalizar Edição]
 
-    L --> O[Processo Finalizado]
+        R --> T[Fim do Processo ADM]
+    end
