@@ -18,6 +18,7 @@ class AreaDeConhecimentoFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'description' => fake()->sentence(),
             'color' => fake()->hexColor(),
             'curso_id' => fake()->numberBetween(1, 5),
         ];

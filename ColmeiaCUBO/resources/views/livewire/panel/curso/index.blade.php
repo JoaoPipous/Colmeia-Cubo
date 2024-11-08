@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center justify-center gap-8">
+<div class="flex w-full flex-col items-center justify-center gap-8 text-neutral-700">
 
     @session('success')
         <div id="message" class="absolute left-0 top-0 w-full bg-green-400 py-2 text-center text-neutral-50">
@@ -20,146 +20,162 @@
         </div>
     @endsession
 
-    <div class="flex w-4/5 items-center justify-between">
-        <h2 class="text-3xl font-bold">Cursos</h2>
-        <div class="flex items-center justify-between gap-5">
-            <a href="{{ route('cursos.create') }}" wire:navigate
-                class="w-full rounded-lg border-2 border-green-500 px-5 py-2 text-sm font-semibold uppercase text-green-600 transition-all duration-100 ease-linear hover:bg-green-200">
-                Adicionar Curso
-            </a>
+    <div class="flex h-[14vh] w-full items-center justify-center rounded-xl bg-[#F1641F] text-white"
+        style="background-image: url({{ asset('background.png') }});">
+        <span class="select-none text-3xl font-bold">Gerenciamento de Cursos</span>
+    </div>
+
+    <div class="flex select-none items-center gap-4">
+        <div class="flex items-center gap-2">
+            <div class="size-8 rounded-lg bg-white p-2 shadow-md"></div>
+            <span>Cursos</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <div class="size-8 rounded-lg bg-neutral-200 p-2 shadow-md"></div>
+            <span>Áreas de Conhecimento</span>
         </div>
     </div>
-    <div class="w-4/5 rounded-lg py-3 shadow shadow-[#ffb966]">
-        <div x-data="{openRow:null}">
-            <table class="w-full">
-                <thead>
-                    <tr>
-                        <th class="pb-2">Nome</th>
-                        <th class="pb-2">Duração</th>
-                        <th class="pb-2">Status</th>
-                        <th class="pb-2">Criado em</th>
-                        <th class="pb-2">Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($cursos as $index => $curso)
-                        <tr class="border-y bg-slate-100 text-center cursor-pointer" wire:key="{{ $curso->id }}" x-on:click="openRow = openRow === {{$index}} ? null : {{$index}}">
-                            <td class="py-3">
-                                {{ $curso->name }}
-                            </td>
 
-                            <td class="py-3">
-                                @if ($curso->duration == 0)
-                                    Indefinido
-                                @else
-                                    {{ $curso->duration }} Horas
-                                @endif
-                            </td>
+    <div class="grid w-full grid-cols-8 items-center gap-2">
+        <div class="col-span-4">
+            <x-input wire:model.live="search" placeholder="Pesquisar por curso..." icon="magnifying-glass" />
+        </div>
 
-                            <td class="min-w-24 py-3">
-                                <label class="inline-flex cursor-pointer items-center">
-                                    <input type="checkbox" id="checkbox-{{ $curso->id }}" class="peer sr-only"
-                                        name="{{ $curso->id }}" wire:click='toggleStatus({{ $curso->id }})'
-                                        {{ $curso->status ? 'checked' : '' }}>
-                                    <div
-                                        class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-[#ff8b00] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#ff8b0066] rtl:peer-checked:after:-translate-x-full">
-                                    </div>
-                                    <div wire:loading wire:target='toggleStatus({{ $curso->id }})'
-                                        class="ms-2 h-6 w-6 animate-spin rounded-full border-2 border-gray-300 border-t-[#ff8b00]">
-                                    </div>
+        <div class="col-span-3 flex">
+            {{ $cursos->links('vendor.livewire.pagination-links') }}
+        </div>
 
-                                </label>
-                            </td>
 
-                            <td class="py-3">
-                                {{ $curso->created_at->format('d/m/Y') }}
-                            </td>
+        <a href="{{ route('cursos.create') }}" draggable="false" wire:navigate.hover
+            class="col-span-1 rounded-lg bg-gray-700 px-4 py-2 text-center text-sm font-medium text-white transition-all duration-100 ease-linear hover:bg-gray-600">
+            Novo Curso
+        </a>
 
-                            <td class="py-3">
-                                <div class="flex items-center justify-center gap-2">
-                                    <div x-data="{ edit: false }" x-on:click="edit = true"
-                                        wire:click="getCurso({{ $curso->id }})"
-                                        class="cursor-pointer select-none rounded-lg border-2 border-yellow-500 px-5 py-2 text-sm font-semibold uppercase text-yellow-600 transition-all duration-100 ease-linear hover:bg-yellow-200">
-                                        Editar
+    </div>
 
-                                        <div x-show="edit"
-                                            class="absolute inset-0 z-10 flex h-screen w-screen cursor-pointer items-center justify-center bg-neutral-600 bg-opacity-30">
 
-                                            <div class="min-h-[70%] min-w-[40%] cursor-default rounded-lg bg-white p-5 shadow-lg"
-                                                x-on:click.away="edit = false">
+    <div class="grid w-full grid-cols-5 rounded-xl bg-white text-center" x-data="{ menu: null, line: null }">
 
-                                                <h2 class="mb-10 text-2xl font-bold text-neutral-700">Editar Curso -
-                                                    {{ $curso->name }}
-                                                </h2>
+        <div class="col-span-5 grid grid-cols-5 border-b-2 py-4">
+            <div class="col-span-1 font-semibold">
+                Nome
+            </div>
 
-                                                <div class="grid grid-cols-4 gap-4">
-                                                    <div class="col-span-4">
-                                                        <label for="first_name"
-                                                            class="mb-2 block text-sm font-medium text-gray-700">Nome do
-                                                            Curso</label>
-                                                        <input type="text" id="first_name" wire:model="name"
-                                                            class="block w-full rounded-lg border border-[#ffb966] bg-gray-50 p-2.5 text-sm text-gray-700 shadow-[#ffb966] focus:border-[#ffb966] focus:ring-[#ffb966]"
-                                                            required />
-                                                    </div>
-                                                    <div class="col-span-4">
-                                                        <label for="first_name"
-                                                            class="mb-2 block text-sm font-medium text-gray-700">Descrição
-                                                            do
-                                                            Curso</label>
-                                                        <textarea type="text" id="first_name" wire:model="description"
-                                                            class="block w-full rounded-lg border border-[#ffb966] bg-gray-50 p-2.5 text-sm text-gray-700 shadow-[#ffb966] focus:border-[#ffb966] focus:ring-[#ffb966]"
-                                                            required></textarea>
-                                                    </div>
-                                                    <div class="col-span-4">
-                                                        <button wire:click.prevent="update({{ $curso->id }})"
-                                                            class="mt-4 w-full rounded-lg border-2 border-green-500 px-5 py-2 text-sm font-semibold uppercase text-green-600 transition-all duration-100 ease-linear hover:bg-green-200">
-                                                            Editar Curso
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+            <div class="col-span-1 font-semibold">
+                Duração
+            </div>
 
-                                    <button wire:click.prevent="delete({{ $curso->id }})"
-                                        class="rounded-lg border-2 border-red-500 px-5 py-2 text-sm font-semibold uppercase text-red-600 transition-all duration-100 ease-linear hover:bg-red-200">
-                                        Excluir
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+            <div class="col-span-1 font-semibold">
+                Descrição
+            </div>
 
-                        @foreach ($curso->areasDeConhecimento as $ac)
-                            <tr class="border-y text-center text-neutral-700" x-show="openRow === {{$index}}">
-                                <td class="py-4">
-                                    {{ $ac->name }}
-                                </td>
-                                <td class="py-4">
-                                    @if ($ac->unidadesCurriculares->count() > 0)
-                                        @php
-                                            $totalUC = 0;
+            <div class="col-span-1 font-semibold">
+                Status
+            </div>
 
-                                            foreach ($ac->unidadesCurriculares as $uc) {
-                                                $totalUC += \App\Models\UnidadeCurricular::find(
-                                                    $uc->unidade_curricular_id,
-                                                )->duration;
-                                            }
-                                        @endphp
+            <div class="col-span-1 font-semibold">
+                Ação
+            </div>
+        </div>
 
-                                        {{ $totalUC }}
-                                        Horas
-                                    @else
-                                        Nenhuma UC Cadastrada
-                                    @endif
-                                </td>
-                            </tr>
-                        @endforeach
+        @foreach ($cursos as $index => $curso)
+            <div class="relative col-span-5 grid grid-cols-5 items-center border-b-2">
+
+                <div class="relative col-span-5 grid grid-cols-5 items-center">
+
+                    @if ($curso->areasDeConhecimento->count() > 0)
+                        <x-feathericon-chevron-up
+                            class="min-w-6 absolute right-5 top-1/2 z-10 w-6 -translate-y-1/2 cursor-pointer"
+                            x-show="line == {{ $curso->id }}"
+                            x-on:click="line == {{ $curso->id }} ? line = null : line = {{ $curso->id }}" />
+
+                        <x-feathericon-chevron-down
+                            class="min-w-6 absolute right-5 top-1/2 z-10 w-6 -translate-y-1/2 cursor-pointer"
+                            x-show="line != {{ $curso->id }}"
+                            x-on:click="line == {{ $curso->id }} ? line = null : line = {{ $curso->id }}" />
+                    @endif
+
+                    <div class="col-span-1 py-4">
+                        <a draggable="false" href="{{ route('ac.show', $curso->id) }}">
+                            {{ $curso->name }}
+                        </a>
+                    </div>
+
+                    <div class="col-span-1 py-4">
+
+                        <p class="line-clamp-2">
+                            {{ $curso->description }}
+                        <p>
+
+                    </div>
+
+                    <div class="col-span-1 py-4">
+                        @if ($curso->duration == 0)
+                            Indefinido
+                        @else
+                            {{ $curso->duration }} Horas
+                        @endif
+                    </div>
+
+                    <div class="col-span-1 py-4">
+                        <label class="inline-flex cursor-pointer items-center" wire:loading.remove
+                            wire:target='toggleStatus({{ $curso->id }})'>
+                            <input type="checkbox" id="checkbox-{{ $curso->id }}" class="peer sr-only"
+                                name="{{ $curso->id }}" wire:click='toggleStatus({{ $curso->id }})'
+                                {{ $curso->status ? 'checked' : '' }}>
+                            <div
+                                class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-[#ff8b00] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#ff8b0066] rtl:peer-checked:after:-translate-x-full">
+                            </div>
+                        </label>
+
+                        <div wire:loading wire:target='toggleStatus({{ $curso->id }})'
+                            class="ms-2 h-6 w-6 animate-spin rounded-full border-2 border-gray-300 border-t-[#ff8b00]">
+                        </div>
+                    </div>
+
+
+
+                    <div class="relative col-span-1 flex items-center justify-center gap-4">
+
+                        <x-feathericon-trash-2 wire:click.prevent="delete({{ $curso->id }})"
+                            class="min-w-6 w-6 cursor-pointer text-red-400" />
+
+
+                        <a draggable="false" href="{{ route('ac.create-with-id', $curso->id) }}" class="relative"
+                            x-data="{ tooltip: false }">
+                            <x-feathericon-plus-circle class="min-w-6 w-6 cursor-pointer text-green-500"
+                                x-on:mouseover="tooltip = true" x-on:mouseleave="tooltip = false" />
+
+                            <div x-show="tooltip" x-transition:enter="transition ease-linear duration-75"
+                                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                                x-transition:leave="transition ease-linear duration-75"
+                                x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                class="absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded-md border border-gray-300 bg-white px-4 py-2 text-xs font-medium text-gray-800 shadow-[0px_12px_30px_-4px_rgba(16,24,40,0.08);] transition-opacity duration-300">
+                                <span
+                                    class="absolute -bottom-1.5 left-1/2 -z-10 h-3 w-3 -translate-x-1/2 rotate-45 border-b border-r border-gray-300 bg-white"></span>
+                                Nova Área de Conhecimento
+                            </div>
+                        </a>
+
+                        <a draggable="false" href="{{ route('cursos.edit', $curso->id) }}">
+                            <x-feathericon-edit class="min-w-6 w-6 cursor-pointer text-amber-500" />
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-span-5 grid grid-cols-5" x-show="line == {{ $curso->id }}" x-collapse>
+                    @foreach ($curso->areasDeConhecimento as $index => $af)
+                        <div class="col-span-5 grid grid-cols-5 bg-neutral-200 py-4 text-center">
+                            <div class="">
+                                {{ $af->name }}
+                            </div>
+                        </div>
                     @endforeach
-                </tbody>
-            </table>
-
-
-        </div>
-
+                </div>
+            </div>
+        @endforeach
     </div>
+
 </div>

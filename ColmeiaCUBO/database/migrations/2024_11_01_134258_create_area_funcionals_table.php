@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pivot_ac_ucs', function (Blueprint $table) {
+        Schema::create('area_funcionals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('unidade_curricular_id')->constrained();
-            $table->foreignId('area_de_conhecimento_id')->constrained();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->foreignId('area_de_conhecimento_id')->constrained('area_de_conhecimentos')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pivot_ac_ucs');
+        Schema::dropIfExists('area_funcionals');
     }
 };

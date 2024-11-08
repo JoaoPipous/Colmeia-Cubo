@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('unidade_curriculars', function (Blueprint $table) {
+        Schema::create('area_de_conhecimentos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('curso_id')->constrained('cursos')->onDelete('cascade');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->integer('duration');
-            $table->boolean('status')->default(true);
+            $table->string('color')->default('#000000');
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('unidade_curriculars');
+        Schema::dropIfExists('area_de_conhecimentos');
     }
 };

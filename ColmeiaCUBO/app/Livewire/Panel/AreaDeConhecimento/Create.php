@@ -8,18 +8,24 @@ use Livewire\Component;
 class Create extends Component
 {
     public $color;
+
     public $name;
+
+    public $description;
 
     public $cursos;
 
-
     public $curso;
 
-    public function mount()
+    public function mount($id = null)
     {
         $this->cursos = Curso::all();
 
-        $this->curso = $this->cursos->first()->id;
+        if ($id) {
+            $this->curso = $id;
+        } else {
+            $this->curso = $this->cursos->first()->id;
+        }
     }
 
     public function store()
@@ -34,6 +40,7 @@ class Create extends Component
 
         $selectedCurso->areasDeConhecimento()->create([
             'name' => $this->name,
+            'description' => $this->description,
             'color' => $this->color
         ]);
 

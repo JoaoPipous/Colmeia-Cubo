@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('area_de_conhecimentos', function (Blueprint $table) {
+        Schema::create('unidade_curriculars', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('area_funcional_id')->constrained('area_funcionals')->onDelete('cascade');
             $table->string('name');
-            $table->string('color');
-            $table->foreignId('curso_id')->constrained();
-            $table->boolean('status')->default(true);
+            $table->text('description')->nullable();
+            $table->integer('duration')->default(0);
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('area_de_conhecimentos');
+        Schema::dropIfExists('unidade_curriculars');
     }
 };

@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PivotAcUc extends Model
+class AreaFuncional extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['unidade_curricular_id', 'area_de_conhecimento_id'];
+    protected $fillable = ['name', 'description', 'area_de_conhecimento_id'];
 
-    public function unidadeCurricular()
+    public function unidadesCurriculares()
     {
-        return $this->belongsTo(UnidadeCurricular::class);
+        return $this->hasMany(UnidadeCurricular::class);
     }
 
     public function areaDeConhecimento()

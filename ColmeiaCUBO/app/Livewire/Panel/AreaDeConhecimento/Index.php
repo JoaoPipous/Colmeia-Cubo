@@ -8,14 +8,21 @@ use App\Models\PivotAcUc;
 use App\Models\UnidadeCurricular;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Index extends Component
 {
-    public $acs;
+    use WithPagination;
 
-    public function mount()
+    public $search;
+
+    public $id;
+
+    public function mount($id = null)
     {
-        $this->acs = AreaDeConhecimento::all();
+        if ($id) {
+            $this->id = $id;
+        }
     }
 
     public function toggleStatus($id)
@@ -26,42 +33,33 @@ class Index extends Component
         $ac->save();
     }
 
+    public function updatedSearch()
+    {
+        $this->resetPage();
+    }
+
     public function delete($id)
     {
         $ac = AreaDeConhecimento::find($id)->first();
 
-        try {
-            DB::beginTransaction();
-
-            $pivot = PivotAcUc::where('area_de_conhecimento_id', $ac->id)->get();
-
-            foreach ($pivot as $p) {
-
-                $curso = Curso::find($ac->curso)->first();
-
-                //dd($p->unidade_curricular_id, $curso->duration);
-
-                $curso->duration = $curso->duration - UnidadeCurricular::find($p->unidade_curricular_id)->duration;
-
-                $curso->save();
-
-                $p->delete();
-            }
-
-            $ac->delete();
-
-            DB::commit();
-
-            $this->acs = AreaDeConhecimento::all();
-        } catch (\Exception $e) {
-            DB::rollBack();
-
-            dd($e);
-        }
+        $ac->delete();
     }
 
     public function render()
     {
-        return view('livewire.panel.area-de-conhecimento.index')->extends('layouts.panel');
+        if ($this->id) {
+            $acs = AreaDeConhecimento::where('curso_id', $this->id)->paginate(5);
+        } else {
+            $acs = AreaDeConhecimento::where('name', 'like', '%' . $this->search . '%')
+                ->orderBy('created_at', 'desc')
+                ->paginate(5);
+        }
+
+        return view(
+            'livewire.panel.area-de-conhecimento.index',
+            [
+                'acs' => $acs,
+            ]
+        )->extends('layouts.panel');
     }
 }

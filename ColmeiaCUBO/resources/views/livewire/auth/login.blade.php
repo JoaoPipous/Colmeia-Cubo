@@ -1,24 +1,24 @@
 @section('title', 'Sign in to your account')
 
-<div class="grid grid-cols-2 mx-auto shadow shadow-[#ff8b00]">
-    <div class="col-span-1 flex flex-col items-center justify-center bg-white px-10  select-none">
+<div class="mx-auto grid grid-cols-2 shadow shadow-[#ff8b00]">
+    <div class="col-span-1 flex select-none flex-col items-center justify-center bg-white px-10">
         <a draggable="false" href="{{ route('home') }}">
-            <img src="https://unifil.br/assets/uploads/2022/11/logo-unifil.svg" class="w-48 h-32 mx-auto text-indigo-600"
+            <img src="https://unifil.br/assets/uploads/2022/11/logo-unifil.svg" class="mx-auto h-32 w-48 text-indigo-600"
                 alt="Estudar Logo" />
         </a>
     </div>
 
     <div class="col-span-1">
-        <div class="px-4 py-8 bg-[#ff8b0055] sm:px-10 shadow shadow-[#ff8b0055]">
+        <div class="bg-[#ff8b0055] px-4 py-8 shadow shadow-[#ff8b0055] sm:px-10">
             <form wire:submit.prevent="authenticate">
                 <div>
-                    <label for="email" class="block text-sm font-medium  text-gray-700 leading-5">
+                    <label for="email" class="block text-sm font-medium leading-5 text-gray-700">
                         Email
                     </label>
 
                     <div class="mt-1 rounded-md shadow-sm">
                         <input wire:model.lazy="email" id="email" name="email" type="email" required autofocus
-                            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md bg-neutral-50 focus:outline-none focus:ring-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 @error('email') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:ring-red @enderror" />
+                            class="focus:ring-blue @error('email') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:ring-red @enderror block w-full appearance-none rounded-md border border-gray-300 bg-neutral-50 px-3 py-2 transition duration-150 ease-in-out focus:border-blue-300 focus:outline-none sm:text-sm sm:leading-5" />
                     </div>
 
                     @error('email')
@@ -27,13 +27,13 @@
                 </div>
 
                 <div class="mt-6">
-                    <label for="password" class="block text-sm font-medium text-gray-700 leading-5">
+                    <label for="password" class="block text-sm font-medium leading-5 text-gray-700">
                         Senha
                     </label>
 
                     <div class="mt-1 rounded-md shadow-sm">
                         <input wire:model.lazy="password" id="password" type="password" required
-                            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md bg-neutral-50focus:outline-none focus:ring-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 @error('password') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:ring-red @enderror" />
+                            class="bg-neutral-50focus:outline-none focus:ring-blue @error('password') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:ring-red @enderror block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 transition duration-150 ease-in-out focus:border-blue-300 sm:text-sm sm:leading-5" />
                     </div>
 
                     @error('password')
@@ -41,11 +41,11 @@
                     @enderror
                 </div>
 
-                <div class="flex gap-4 items-center justify-between mt-6">
+                <div class="mt-6 flex items-center justify-between gap-4">
                     <div class="flex items-center">
                         <input wire:model.lazy="remember" id="remember" type="checkbox"
-                            class="form-checkbox w-4 h-4 text-indigo-600 transition duration-150 ease-in-out" />
-                        <label for="remember" class="block ml-2 text-sm text-gray-900 leading-5">
+                            class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                        <label for="remember" class="ml-2 block text-sm leading-5 text-gray-900">
                             Lembrar-me
                         </label>
                     </div>
@@ -58,7 +58,7 @@
                 <div class="mt-6">
                     <span class="block w-full rounded-md shadow-sm">
                         <button type="submit"
-                            class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-[#ff8b00] border border-transparent rounded-md hover:bg-[#ce8a36] focus:outline-none focus:border-[#99692e] focus:ring-indigo active:bg-[#ce8a36] transition duration-150 ease-in-out">
+                            class="focus:ring-indigo flex w-full justify-center rounded-md border border-transparent bg-[#ff8b00] px-4 py-2 text-sm font-medium text-white transition duration-150 ease-in-out hover:bg-[#ce8a36] focus:border-[#99692e] focus:outline-none active:bg-[#ce8a36]">
                             Entrar
                         </button>
                     </span>

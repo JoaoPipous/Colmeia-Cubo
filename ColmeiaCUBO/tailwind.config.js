@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-import forms from "@tailwindcss/forms";
 
 module.exports = {
     theme: {
@@ -9,12 +8,12 @@ module.exports = {
             },
         },
     },
-    presets: [require("./vendor/tallstackui/tallstackui/tailwind.config.js")],
     variants: {
         extend: {
             backgroundColor: ["active"],
         },
     },
+    presets: [require("./vendor/tallstackui/tallstackui/tailwind.config.js")],
     content: [
         "./app/**/*.php",
         "./resources/**/*.html",
@@ -30,6 +29,5 @@ module.exports = {
     plugins: [
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
-        forms,
     ],
 };

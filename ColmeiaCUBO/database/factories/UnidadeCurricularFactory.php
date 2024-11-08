@@ -20,6 +20,7 @@ class UnidadeCurricularFactory extends Factory
             'name' => fake()->word(),
             'description' => fake()->sentence(),
             'duration' => fake()->numberBetween(1, 10),
+            'area_funcional_id' => fake()->numberBetween(1, 5),
         ];
     }
 }

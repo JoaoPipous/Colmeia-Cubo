@@ -22,9 +22,6 @@ class Create extends Component
             'description' => $this->description,
         ]);
 
-        $this->name = '';
-        $this->description = '';
-
         return redirect()->route('cursos.index')->with('success', 'Curso criado com sucesso.');
     }
 

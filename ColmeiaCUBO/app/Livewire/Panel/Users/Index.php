@@ -3,68 +3,39 @@
 namespace App\Livewire\Panel\Users;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Index extends Component
 {
+    use WithPagination;
 
-    public $users;
-
-    public $name;
-
-    public $email;
-
-    public $password;
-
-    public function mount()
-    {
-        $this->users = User::all();
-    }
+    public $search;
 
     public function delete($id)
     {
-        User::find($id)->delete();
+        if (User::count() == 1) {
+            return redirect()->route('users.index')->with('error', 'Você não pode excluir o último usuário');
+        }
 
-        session()->flash('success', 'Usuário deletado com sucesso!');
-
-        $this->users = User::all();
+        User::where('id', $id)->delete();
     }
 
-    public function toggleStatus($id)
+    public function updatedSearch()
     {
-        $user = User::find($id);
-
-        $user->status = !$user->status;
-        $user->save();
-
-        $this->users = User::all();
-    }
-
-    public function getUser($id)
-    {
-        $user = User::find($id);
-
-        $this->name = $user->name;
-        $this->email = $user->email;
-    }
-
-    public function update($id)
-    {
-        $user = User::find($id);
-
-        $user->name = $this->name;
-        $user->email = $this->email;
-        $this->password != '' ?  $user->password = Hash::make($this->password) : $user->password;
-        $user->save();
-
-        session()->flash('success', 'Usuário atualizado com sucesso!');
-
-        $this->users = User::all();
+        $this->resetPage();
     }
 
     public function render()
     {
-        return view('livewire.panel.users.index')->extends('layouts.panel');
+        $users = User::where('name', 'like', '%' . $this->search . '%')
+            ->orderBy('created_at', 'desc')->paginate(5);
+
+        return view(
+            'livewire.panel.users.index',
+            [
+                'users' => $users
+            ]
+        )->extends('layouts.panel');
     }
 }
