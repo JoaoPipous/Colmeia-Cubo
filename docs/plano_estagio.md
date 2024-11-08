@@ -61,27 +61,46 @@ Abaixo está o diagrama de caso de uso do projeto, onde são detalhadas as princ
 - **Gerenciar Áreas de Conhecimento**: Facilitado pela nova interface para definir, atualizar ou consultar áreas específicas, agora com opção de seleção de cor.
 - **Gerenciar Unidades Curriculares (UCs)**: Permite a adição de nome, descrição e carga horária.
 - **Acessar Colmeia**: Interface de visualização para alunos e professores.
-- **Baixar Colmeia**: Opção de download para consulta offline em formatos variados.
 
 ![Diagrama de caso de uso](img/diagramas/casodeuso.png)
 
 ## TELAS
 
-- **Tela Inicial**: Exibe a visualização em "Colmeia", mostrando todas as áreas e unidades curriculares de forma visual, acessível para todos os usuários.
+- **Tela Inicial (Home)**: Exibe a visualização em "Colmeia", mostrando todas as áreas e unidades curriculares de forma visual, acessível para todos os usuários.
   
-  ![Tela Inicial](img/telas/telainicial.png)
+  ![Tela Inicial](img/telas/tela_home.png)
 
-- **Tela de Login**: Interface de autenticação para o usuário administrativo (Coordenador).
+- **Tela da Colmeia**: Fornece uma visualização interativa da estrutura curricular completa.
   
-  ![Tela de Login](img/telas/telalogin.png)
+  ![Tela da Colmeia](img/telas/tela_colmeia.png)
 
-- **Tela de Detalhes da UC**: Permite que alunos visualizem informações detalhadas sobre as unidades curriculares.
+- **Tela de Login Administrativo**: Interface de autenticação para o usuário administrativo (Coordenador).
+  
+  ![Tela de Login](img/telas/tela_login.png)
 
-  ![Tela de Detalhes](img/telas/telacomfuncao.png)
+- **Tela de Cursos**: Permite que os coordenadores gerenciem os cursos existentes.
+  
+  ![Tela de Cursos](img/telas/tela_cursos.png)
+
+- **Tela de Áreas de Conhecimento**: Permite que os coordenadores gerenciem as áreas de conhecimento.
+  
+  ![Tela de Áreas de Conhecimento](img/telas/tela_ac.png)
+
+- **Tela de Áreas Funcionais**: Organiza e gerencia áreas que agrupam unidades curriculares relacionadas.
+  
+  ![Tela de Áreas Funcionais](img/telas/tela_af.png)
+
+- **Tela de Unidades Curriculares (UCs)**: Mostra e permite o gerenciamento das unidades curriculares.
+  
+  ![Tela de Unidades Curriculares](img/telas/tela_uc.png)
+
+- **Tela de Usuários**: Para administração e gerenciamento dos perfis de usuários do sistema.
+  
+  ![Tela de Usuários](img/telas/tela_users.png)
 
 ## WORKFLOW (AS IS) NA NOTAÇÃO BPMN
 
-O workflow BPMN "as is" representa o processo atual do sistema **Colmeia CUBO** antes das melhorias. O processo se inicia com o login, seguido pela seleção de curso e turma, com opções para visualizar, editar ou publicar a colmeia. Após a publicação ou edição, um link pode ser gerado para compartilhamento, e o conteúdo da colmeia pode ser baixado.
+O workflow BPMN "as is" representa o processo atual do sistema **Colmeia CUBO** antes das melhorias. O processo se inicia com o login, seguido pela seleção de curso e turma, com opções para visualizar, editar ou publicar a colmeia.
 
 ![Workflow AS IS](img/diagramas/as-is.png)
 
@@ -90,8 +109,8 @@ O workflow BPMN "as is" representa o processo atual do sistema **Colmeia CUBO** 
 ### LINGUAGEM DE PROGRAMAÇÃO
 
 - **PHP (Laravel)**: Utilizado no backend para gerenciamento de banco de dados, autenticação e processamento de lógica de negócios.
-- **JavaScript (Vue.js)**: Responsável por criar uma interface de usuário dinâmica e responsiva.
-- **TypeScript**: Suporte opcional para tipagem estática no frontend.
+- **JavaScript (Alpine.js)**: Responsável por adicionar reatividade leve no frontend.
+- **Livewire**: Utilizado para componentização no Laravel, facilitando a criação de interfaces reativas e simplificadas.
 
 ### BANCO DE DADOS
 
@@ -100,25 +119,30 @@ O workflow BPMN "as is" representa o processo atual do sistema **Colmeia CUBO** 
 ### Ferramentas de Desenvolvimento
 
 - **Git**: Controle de versão.
-- **Docker**: Containerização.
-- **CI/CD**: Automatização de testes e implantação.
 
 ### FRONT-END
 
 - **HTML**: Estrutura do conteúdo.
 - **CSS (Tailwind CSS)**: Estilização e responsividade.
-- **Alpine.js**: Interatividade leve no frontend.
+- **Alpine.js**: Reatividade leve e interatividade no frontend.
 
 ### BACK-END
 
 - **Laravel**: Framework para lógica do servidor, incluindo gerenciamento de dados e autenticação.
 - **Laravel Sanctum**: Autenticação para SPA.
-- **Livewire**: Simplifica a criação de interfaces reativas em PHP no Laravel.
+- **Livewire**: Utilizado para componentizar a aplicação, facilitando a construção de interfaces dinâmicas.
 
 ## CRONOGRAMA
 
-![Cronograma](img/CronogramaEstagio.png)
+![Cronograma](img/diagrams/CronogramaEstagio.png)
 
 ## REFERÊNCIAS
+
+- [Colmeia CUBO](https://unifil.br/cubo/)
+- [Yggdrasil2](https://akafts.github.io/yggdrasil2/)
+- [Honeycomb - Hexagons](https://abbekeultjes.nl/honeycomb/)
+- [Laravel Documentation](https://laravel.com/docs/11.x)
+- [Livewire Documentation](https://laravel-livewire.com/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/)
 
 [Voltar](readme.md)

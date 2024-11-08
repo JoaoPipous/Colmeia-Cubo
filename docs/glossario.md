@@ -1,14 +1,15 @@
-# Glossário </br> Projeto Colmeia CUBO </br> Versão 1.0
+# Glossário </br> Projeto Colmeia CUBO </br> Versão 1.1
 
 ## Histórico da Revisão
 
-| Data       | Versão | Descrição            | Autor                        |
-|------------|--------|----------------------|------------------------------|
-| 13/03/2024 | 1.0    | Criação do glossário | João Vitor Deliberador       |
+| Data       | Versão | Descrição                    | Autor                        |
+|------------|--------|------------------------------|------------------------------|
+| 13/03/2024 | 1.0    | Criação do glossário         | João Vitor Deliberador       |
+| 08/11/2024 | 1.1    | Adição de novos termos       | João Vitor Deliberador       |
 
 ## Índice
 
-- [Glossário  Projeto Colmeia CUBO  Versão 1.0](#glossário--projeto-colmeia-cubo--versão-10)
+- [Glossário  Projeto Colmeia CUBO  Versão 1.1](#glossário--projeto-colmeia-cubo--versão-11)
   - [Histórico da Revisão](#histórico-da-revisão)
   - [Índice](#índice)
   - [Introdução](#introdução)
@@ -23,7 +24,9 @@
       - [Áreas Funcionais](#áreas-funcionais)
       - [Colmeia CUBO](#colmeia-cubo)
       - [UCS](#ucs)
+      - [Unidade Curricular](#unidade-curricular)
       - [Carga Horária](#carga-horária)
+      - [Hexágono](#hexágono)
     - [Tecnologia](#tecnologia)
       - [Laravel](#laravel)
       - [Tailwind](#tailwind)
@@ -32,6 +35,8 @@
       - [PHP](#php)
       - [JavaScript](#javascript)
       - [TypeScript](#typescript)
+      - [Breadcrumbs](#breadcrumbs)
+      - [Hexo](#hexo)
     - [Referências](#referências)
 
 ## Introdução
@@ -51,7 +56,6 @@ O glossário abrange termos encontrados nos seguintes documentos do projeto:
 - [Telas do Projeto](telas.md);
 - [Plano de Estágio](plano_estagio.md).
 
- 
 ### Visão Geral
 
 As definições são categorizadas em Educação e Tecnologia, refletindo os principais focos do projeto Colmeia CUBO.
@@ -69,7 +73,7 @@ As definições são categorizadas em Educação e Tecnologia, refletindo os pri
 
 #### Área de Conhecimento
 
->São as áreas gerais de formação, também consideradas o nível mais alto de classificação. Em linhas gerais, é o primeiro nível de classificação da estrutura curricular
+>São as áreas gerais de formação, também consideradas o nível mais alto de classificação. Em linhas gerais, é o primeiro nível de classificação da estrutura curricular.
 
 #### Áreas Funcionais
 
@@ -81,11 +85,19 @@ As definições são categorizadas em Educação e Tecnologia, refletindo os pri
 
 #### UCS
 
-> |Ucs ou mais conhecido como Unidades curriculares sao. Componente de ensino com objetivos educacionais definidos, carga horária específica e avaliação, que compõe o currículo dos cursos de graduação e pós-graduação.
+> Unidades Curriculares (UCs) são componentes de ensino com objetivos educacionais definidos, carga horária específica e avaliação, que compõem o currículo dos cursos de graduação e pós-graduação.
+
+#### Unidade Curricular
+
+> Componente individual de um curso com objetivos de ensino específicos, incluindo conteúdo programático, metodologia de ensino e carga horária associada. As Unidades Curriculares estão organizadas dentro das Áreas Funcionais e são essenciais para a estrutura e cumprimento dos currículos acadêmicos.
 
 #### Carga Horária
 
 > Total de horas destinadas à realização de uma unidade curricular, incluindo horas de aula, estudo individual ou em grupo, e atividades práticas.
+
+#### Hexágono
+
+> Elemento visual utilizado na estrutura da colmeia, simbolizando um módulo ou componente individual (como áreas de conhecimento ou unidades curriculares) em uma forma compacta e interligada, criando uma estrutura de fácil compreensão. [Fonte](https://abbekeultjes.nl/honeycomb/)
 
 ### Tecnologia
 
@@ -94,13 +106,16 @@ As definições são categorizadas em Educação e Tecnologia, refletindo os pri
 > Framework PHP para desenvolvimento web que oferece uma sintaxe expressiva e elegante. Utilizado no back-end do projeto Colmeia CUBO para gerenciar o banco de dados, autenticação de usuários e lógica de negócios.
 
 #### Tailwind
+
 >Framework CSS utilitário altamente configurável que fornece classes de baixo nível diretamente utilizáveis no HTML. Ao invés de escrever estilos CSS personalizados, você utiliza classes predefinidas que se combinam para criar qualquer design desejado.
 
 #### Alpine
->é um framework JavaScript leve, que permite adicionar interatividade aos componentes do frontend sem a complexidade dos frameworks maiores como React ou Vue. É ideal para projetos onde a simplicidade e o desempenho são prioridades. 
+
+> Framework JavaScript leve, que permite adicionar interatividade aos componentes do frontend sem a complexidade dos frameworks maiores como React ou Vue. É ideal para projetos onde a simplicidade e o desempenho são prioridades.
 
 #### Livewire
-> é um framework full-stack para Laravel que simplifica a construção de interfaces dinâmicas e reativas sem sair do conforto do PHP.
+
+> Framework full-stack para Laravel que simplifica a construção de interfaces dinâmicas e reativas sem sair do conforto do PHP.
 
 #### PHP
 
@@ -114,19 +129,24 @@ As definições são categorizadas em Educação e Tecnologia, refletindo os pri
 
 > Superset de JavaScript que adiciona tipagem estática para aprimorar o desenvolvimento no front-end do projeto Colmeia CUBO. TypeScript é usado para aumentar a manutenibilidade e a escalabilidade do código JavaScript, aproveitando suas características de verificação de tipo em tempo de compilação.
 
+#### Breadcrumbs
+
+> Elemento de navegação visual que ajuda o usuário a entender e explorar a estrutura hierárquica do site, exibindo o caminho de navegação percorrido até a página atual.
+
+#### Hexo
+
+> Framework de geração de sites estáticos baseado em Node.js, usado para criar blogs e sites com conteúdo organizado e de fácil manutenção.
+
 ### Referências
 
-Metodo Cubo. Disponivel em <https://unifil.br/cubo/> Acesso em: 10 mar. 2024
-
-Entendendo Sistema Cubo? Disponivel em <https://www.sistemacolmeia.com.br/#:~:text=O%20COLMEIA%20permite%20o%20m%C3%A9dico,prescri%C3%A7%C3%B5es%20internas%20para%20pacientes%20internados.&text=S%C3%A3o%20feitas%20para%20pacientes%20com,necessidade%20de%20interna%C3%A7%C3%A3o%20ou%20observa%C3%A7%C3%A3o.> Acesso em 20 mar. 2024 
-
-Disponível em: <https://aws.amazon.com/pt/what-is/web-application/>. Acesso em: 2 abril. 2024
-
-API? Disponivel em <https://aws.amazon.com/pt/what-is/api/>. Acesso 5 abril. 2024
-
-Protocolos InertiaJS. Disponivel em <https://inertiajs.com/the-protocol>. Acesso 3 abril. 2024 
-
-Documentaçao Laravel. Disponivel em <https://laravel.com/docs/11.x>. Acesso 5 abril. 2024
-
+- Método Cubo. Disponível em <https://unifil.br/cubo/>. Acesso em: 10 mar. 2024
+- Entendendo Sistema Colmeia. Disponível em <https://www.sistemacolmeia.com.br>. Acesso em 20 mar. 2024
+- Disponível em: <https://aws.amazon.com/pt/what-is/web-application/>. Acesso em: 2 abril. 2024
+- API? Disponível em <https://aws.amazon.com/pt/what-is/api/>. Acesso 5 abril. 2024
+- Protocolos InertiaJS. Disponível em <https://inertiajs.com/the-protocol>. Acesso 3 abril. 2024
+- Documentação Laravel. Disponível em <https://laravel.com/docs/11.x>. Acesso 5 abril. 2024
+- Documentação Livewire. Disponível em <https://laravel-livewire.com/docs/2.x/quickstart>. Acesso 7 ago. 2024
+- Documentação Tailwind CSS. Disponível em <https://tailwindcss.com/docs>. Acesso 8 ago. 2024
+- Honeycomb Design. Disponível em: <https://abbekeultjes.nl/honeycomb/>. Acesso em 15 ago. 2024
 
 [Voltar](readme.md)

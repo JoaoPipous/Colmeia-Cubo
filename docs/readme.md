@@ -9,6 +9,8 @@
 
 - [Plano de Estagio](plano_estagio.md)
 
+- [Relatorio Final](RELATORIOFINAL.MD)
+
 - [Pedido dos Investidores](PedidodeInvestidor.md)
 
 - [Especificação Suplementar](especificacao_suplementar.md)

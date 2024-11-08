@@ -2,10 +2,10 @@
 
 ## Histórico da Revisão
 
-| Data | Versão | Descrição | Autor |
-| ---- | ------ | --------- | ----- |
-| 03/03/2024 | 1.0 | Primeira versão da entrevista | João Vitor Deliberador |
-| 15/03/2024 | 1.1 | Segunda entrevista parar finalizar as duvidas  | João Vitor Deliberador |
+| Data       | Versão | Descrição                                | Autor                    |
+|------------|--------|------------------------------------------|--------------------------|
+| 03/03/2024 | 1.0    | Primeira versão da entrevista            | João Vitor Deliberador   |
+| 15/03/2024 | 1.1    | Segunda entrevista para finalizar dúvidas | João Vitor Deliberador   |
 
 ## Índice
 
@@ -33,180 +33,112 @@
 
 ## Introdução
 
-O pedido do investidor é um documento que contém todas as informações necessárias para fazer o sistema pedido.
+O pedido do investidor é um documento que contém todas as informações necessárias para o desenvolvimento do sistema solicitado.
 
 ### Objetivo
 
-O objetivo é fazer uma entrevista para entender todos os requisitos que a stakeholder necessita para iniciar o desenvolvimento.
+O objetivo deste documento é consolidar os requisitos levantados junto ao investidor, identificando as necessidades para o desenvolvimento do sistema Colmeia CUBO.
 
 ### Escopo
 
-O sistema irá agilizar, facilitar e aumentar a eficiência na gestão de cursos, áreas de conhecimento e unidades curriculares. Consistirá em um site onde teremos o cadastro/login de usuários, e dependendo do cargo, eles terão acesso a diferentes informações e funções. As principais funcionalidades incluem:
+O sistema tem como objetivo agilizar, organizar e aumentar a eficiência na gestão de cursos, áreas de conhecimento e unidades curriculares na UniFil. As principais funcionalidades incluem:
 
 - **Cadastro/Login de Usuários:** Autenticação de alunos e orientadores com diferentes níveis de acesso.
 - **Gerenciamento de Cursos:** Adicionar, editar e remover informações sobre cursos.
 - **Gerenciamento de Áreas de Conhecimento:** Adicionar, editar e remover informações sobre áreas de conhecimento.
 - **Gerenciamento de Unidades Curriculares (UCs):** Adicionar, editar e remover informações sobre unidades curriculares.
-- **Visualização da Estrutura Curricular:** Alunos e orientadores podem acessar e visualizar a colmeia curricular de forma organizada.
-- **Baixar Colmeia:** Permitir que os usuários façam o download da estrutura curricular.
+- **Visualização da Estrutura Curricular:** Permitir que alunos e orientadores acessem e visualizem a estrutura curricular de forma organizada.
 - **Notificações e Atualizações:** Notificar alunos e orientadores sobre atualizações curriculares e eventos relevantes.
 
 ### Definições e Abreviações
 
-Consultar glossário.
-
+Consultar o [glossário](glossario.md) para uma lista de definições e abreviações utilizadas neste documento.
 
 ### Visão Geral
 
-O capítulo um visa fornecer informações iniciais sobre o projeto, uma análise geral. O segundo capítulo fornece informações sobre o investidor. O terceiro capítulo fornece uma avaliação sobre os problemas citados pelo investidor. O quarto capítulo fornece informações sobre o background dos usuários. O quinto capítulo é uma recapitulação dos requisitos passados. O sexto capítulo é uma validação de premissas dos problemas. O sétimo capítulo avalia sua solução. O oitavo capítulo avalia as oportunidades, ou seja, quem utilizará e onde será usado. O nono capítulo contém as necessidades de confiabilidade, desempenho e necessidades de suporte. O décimo capítulo contém as formas de contato e se será possível outras reuniões com o investidor. E o último capítulo é um resumo.
+Este documento é dividido em capítulos para facilitar a compreensão. Cada capítulo aborda aspectos específicos dos requisitos e expectativas do investidor, desde a identificação do problema até a proposta de solução e a análise de requisitos técnicos.
 
 ## Estabelecer Perfil do Investidor ou do Usuário
 
-- **Nome:** Helen Dias 
-
-- **Empresa / Segmento de Mercado:** UniFil 
-
+- **Nome:** Helen Dias
+- **Empresa / Segmento de Mercado:** UniFil
 - **Cargo:** Professora e Coordenadora
-
-- **Quais são suas responsabilidades principais?** Gerenciar as Colmeis e crialas para informar os alunos
-
-- **Como o sucesso é medido?** Pela conclusão de todas as Colmeias
-
-- **Quais problemas interferem em seu sucesso?** Algum erro de digitação ou problemas com os dados!
+- **Principais Responsabilidades:** Gerenciar as colmeias curriculares e criar estrutura informativa para os alunos.
+- **Medição de Sucesso:** Conclusão e precisão de todas as colmeias.
+- **Principais Dificuldades:** Erros de digitação ou inconsistências nos dados inseridos.
 
 ## Avaliando o Problema
 
-- -**Para quais problemas faltam boas soluções?** Uma forma eficiente de gerenciar cursos, áreas de conhecimento e unidades curriculares, e oferecer aos alunos e orientadores acesso organizado a essas informações.
-
-
-- **Quais são elas?** Desenvolver um sistema web que permita o cadastro e login de usuários, e forneça funcionalidades para gerenciamento de cursos, áreas de conhecimento e unidades curriculares, além de visualização e download da colmeia curricular
-
-**Para cada problema, pergunte:**
-
-- **Por que este problema existe?** Por falta de um sistema centralizado e automatizado para gerenciar e acessar informações curriculares.
-
-- **Como você o resolve agora?** Utilizando planilhas e documentos manuais para gerenciar informações e comunicação por e-mail e telefone para disseminação dessas informações.
-
-- **Como você gostaria de resolvê-lo?** De maneira automatizada e centralizada, através de um sistema web intuitivo que permita o gerenciamento eficiente e o acesso fácil às informações 
+- **Problemas sem boas soluções:** Dificuldade em gerenciar cursos, áreas de conhecimento e unidades curriculares de maneira integrada e organizada.
+- **Solução Ideal:** Sistema web centralizado para cadastro e login de usuários, gerenciamento de cursos e unidades curriculares, e visualização da estrutura curricular.
+  
+  - **Motivo do problema:** Falta de um sistema automatizado e centralizado.
+  - **Solução Atual:** Utilização de planilhas e documentos manuais.
+  - **Solução Desejada:** Plataforma automatizada e centralizada para gestão e acesso simplificado.
 
 ## Entendendo o Ambiente do Usuário
 
-- **Quem são os usuários?** Alunos, orientadores e administradores da UniFil
-
-- **Qual é seu background educacional?** Variado, desde estudantes até professores e administradores com diferentes níveis de experiência acadêmica.
-
-- **Qual é seu background de computador?** Variado, alguns usuários podem ter habilidades básicas, enquanto outros podem ter habilidades avançadas em informática.
-
-- **Os usuários têm experiência com este tipo de aplicativo?** Experiência variada; alguns podem ter usado sistemas de gestão acadêmica antes, enquanto outros podem estar usando pela primeira vez.
-
-- **Quais plataformas estão em uso?** Planilhas, documentos Word e comunicação por e-mail e telefone.
-
-- **Quais são seus planos para plataformas futuras?** Um sistema web centralizado para gerenciamento e acesso a informações curriculares.
-
-- **Quais aplicativos adicionais você utiliza com os quais nós precisamos fazer interface?** Sistemas internos de gerenciamento acadêmico e bancos de dados existentes da instituição.
-
-- **Quais são suas expectativas para o tempo de treinamento?** Treinamento mínimo, com preferência por uma interface intuitiva e fácil de usar.
-
-- **De quais tipos de documentação impressa e on-line você precisa?** Manual online e guias de usuário para suporte e referência.
+- **Usuários:** Alunos, orientadores e administradores da UniFil.
+- **Background Educacional e Técnico:** Variado, com diferentes níveis de experiência em informática.
+- **Experiência com Aplicativos Semelhantes:** Variada, com alguns usuários familiarizados com sistemas de gestão acadêmica.
+- **Plataformas Usadas Atuais:** Planilhas, documentos Word e comunicação por e-mail.
+- **Planos para Plataformas Futuras:** Sistema web centralizado.
+- **Expectativas de Treinamento:** Treinamento mínimo com interface intuitiva.
+- **Documentação Necessária:** Manual online e guias de usuário.
 
 ## Recapitulação para Entendimento
 
-- **Você me disse:**
-
-  - inserir manualmente os dados dos alunos e das UCs na Colmeia
-  
-  - Ter um sistema pra automatizar tudo isso, fluido e funcional
-
-- **Isso representa os problemas que você está tendo com a solução existente?** Sim.
+- **O que foi informado pelo investidor:** 
+  - Processo atual envolve inserção manual de dados.
+  - Desejo por sistema automatizado e visualmente agradável.
+- **Confirmação dos problemas:** O sistema atual de gerenciamento é ineficiente.
 
 ## Entradas do Analista no Problema do Investidor (validar ou invalidar premissas)
 
-- **Quais, se houver, problemas estão associados com:**
+- **Necessidade de Centralização:**
+  - **Problema Real:** Sim.
+  - **Motivo:** Falta de sistema centralizado para armazenar e organizar dados.
+  - **Solução Atual:** Planilhas e documentos dispersos.
+  - **Solução Ideal:** Plataforma web centralizada.
+  - **Prioridade:** Alta.
 
-  - ***Um local onde o usuário possa ter todas suas informações curriculares armazenadas e prontas para acesso e download se necessário.***
-
-    - **Este é um problema real?**
-
-      Sim.
-
-    - **Quais são os motivos para este problema?**
-
-      Não ter um sistema web centralizado onde as informações curriculares estão armazenadas e organizadas.
-
-    - **Como você resolve o problema atualmente?**
-
-      Utilizando planilhas e documentos manuais, com informações dispersas e comunicação por e-mail e telefone.
-
-    - **Como você gostaria de resolver o problema?**
-
-      Criar uma plataforma web que contenha todas as informações curriculares organizadas e acessíveis para alunos e orientadores.
-
-    - **Como você classificaria a resolução desses problemas em comparação com outros mencionados?**
-
-      Alta.
-
-  - ***Gerar as informações curriculares de maneira automática.***
-
-    - **Este é um problema real?**
-
-      Sim.
-
-    - **Quais são os motivos para este problema?**  
-
-      A necessidade de inserir e atualizar manualmente as informações curriculares, o que é demorado e sujeito a erros.
-
-    - **Como você resolve o problema atualmente?**
-
-      As informações são inseridas e atualizadas manualmente em planilhas e documentos.
-
-    - **Como você gostaria de resolver o problema?**
-
-      Desenvolver um sistema automatizado que gere e atualize as informações curriculares com base nos dados fornecidos pelos orientadores e administradores.
-
-    - **Como você classificaria a resolução desses problemas em comparação com outros mencionados?**
-
-      Principal.
-
+- **Automatização das Informações Curriculares:**
+  - **Problema Real:** Sim.
+  - **Motivo:** A inserção manual é demorada e sujeita a erros.
+  - **Solução Atual:** Entrada manual de dados.
+  - **Solução Ideal:** Sistema automatizado.
+  - **Prioridade:** Principal.
 
 ## Avaliando Sua Solução (se aplicável)
 
-- **E se você pudesse…**
-    - Facilitar o uso!
-    - 
-- **Como você classificaria a importância deles?** média.
+- **Sugestões para a Solução:**
+  - Facilitar o uso e tornar o sistema intuitivo.
+  - **Importância:** Média.
 
 ## Avaliando a Oportunidade
 
-- **Quem precisa deste aplicativo em sua organização?** Cordenadores e Alunos da UniFil.
-
-- **Quantos desses tipos de usuários utilizariam o aplicativo?** Inúmeros usuários.
-
-- **Como você avaliaria uma solução bem-sucedida?** Cumprir todos os requisitos pedidos.
+- **Público-Alvo:** Coordenadores e alunos da UniFil.
+- **Expectativa de Uso:** Vários usuários simultâneos.
+- **Sucesso da Solução:** Cumprimento de todos os requisitos propostos.
 
 ## Avaliando a Confiabilidade, o Desempenho e as Necessidades de Suporte
 
-- **Quais são suas expectativas para confiabilidade?** Conseguir colocar todos os dados no serviço sem falhas!
-
-- **Quais são suas expectativas para desempenho?** Um sistema 24/7 dentro de um servidor.
-- **Você ou outras pessoas suportarão o produto?**  Será feito o suporte caso necessário.
-
-- **Você tem necessidades especiais para suporte?** E com relação ao acesso de manutenção e serviço? Em análise.
-
-- **Quais são os requisitos de segurança?** Manter o sistema de Gerenciamento de Colmeia e Cursos privado apenas pra os Cordenadores .
-
-- **Como o software será distribuído?** Servidor do departamento de computação.
+- **Expectativas de Confiabilidade:** Sistema que armazene e mantenha os dados com integridade.
+- **Expectativas de Desempenho:** Operação contínua, 24/7, em um servidor seguro.
+- **Suporte ao Produto:** Suporte será oferecido conforme necessário.
+- **Necessidades Especiais de Suporte:** Em análise.
+- **Requisitos de Segurança:** Acesso restrito ao gerenciamento do sistema.
+- **Distribuição do Software:** Servidor dedicado da UniFil.
 
 ## Wrap-Up
 
-- **Se eu precisar fazer outras perguntas, posso telefonar para você?** Mandar e-mail ou WhatsApp (preferencialmente WhatsApp)
+- **Forma de Contato para Perguntas:** Preferência por WhatsApp ou e-mail.
+- **Participação em Revisão de Requisitos:** Disposição para reuniões adicionais se necessário.
 
-- **Você estaria disposto a participar de uma revisão de requisitos?** Está disposta a ter outras reuniõe
-- 
 ## Resumo do Analista
 
-- Gerar um Sistema com Animaçoes bonitas pra os alunos
-
-- Fazer um sistema onde os dados seram colocados e sera feito uma Colmeia Automaticamente
+- Desenvolver um sistema com visual agradável para os alunos.
+- Automatizar a criação de colmeias com dados organizados e de fácil acesso.
 
 ---
 

@@ -1,19 +1,15 @@
-# Especificação Suplementar </br> PROJETO DA COLMEIA CUBO </br> Versão 1.0
+# Especificação Suplementar </br> PROJETO DA COLMEIA CUBO </br> Versão 1.1
 
 ## Histórico da Revisão
 
-| Data | Versão | Descrição | Autor |
-| ---- | ------ | --------- | ----- |
-| 03/04/2024 | 1.0 | Criação do documento | João Vitor Deliberador  
-
-| Data | Versão | Descrição | Autor |
-| ---- | ------ | --------- | ----- |
-| 05/04/2024 | 1.0 | Finalizando documento | João Vitor Deliberador  
-
+| Data       | Versão | Descrição                | Autor                  |
+|------------|--------|--------------------------|------------------------|
+| 03/04/2024 | 1.0    | Criação do documento     | João Vitor Deliberador |
+| 08/11/2024 | 1.1    | Atualização do documento | João Vitor Deliberador |
 
 ## Índice
 
-- [Especificação Suplementar  PROJETO DA COLMEIA CUBO  Versão 1.0](#especificação-suplementar--projeto-da-colmeia-cubo--versão-10)
+- [Especificação Suplementar  PROJETO DA COLMEIA CUBO  Versão 1.1](#especificação-suplementar--projeto-da-colmeia-cubo--versão-11)
   - [Histórico da Revisão](#histórico-da-revisão)
   - [Índice](#índice)
   - [Introdução](#introdução)
@@ -35,7 +31,7 @@
     - [Padrão de Codificação](#padrão-de-codificação)
   - [Restrições de Design](#restrições-de-design)
     - [Logo e Cores](#logo-e-cores)
-    - [Liguagem de Programação](#liguagem-de-programação)
+    - [Linguagem de Programação](#linguagem-de-programação)
   - [Documentação do Usuário On-line e Requisitos do Sistema de Ajuda](#documentação-do-usuário-on-line-e-requisitos-do-sistema-de-ajuda)
   - [Componentes Comprados](#componentes-comprados)
   - [Interfaces](#interfaces)
@@ -51,19 +47,16 @@
 O documento de Especificação Suplementar é responsável por capturar os requisitos do sistema que não são prontamente capturados nos casos de uso do modelo de caso de uso. Entre os requisitos estão incluídos:
 
 - Requisitos legais e de regulamentação, incluindo padrões de aplicativos.
-
 - Atributos de qualidade do sistema a ser criado, incluindo requisitos de utilidade, confiabilidade, desempenho e suportabilidade.
-
-- Outros requisitos como sistemas e ambientes operacionais, requisitos de
-compatibilidade e restrições de design.
+- Outros requisitos como sistemas e ambientes operacionais, requisitos de compatibilidade e restrições de design.
 
 ### Objetivo
 
-Esta especificação suplementar visa complementar o modelo caso de uso, juntos capturam todos os requisitos de software que precisam ser descritos.
+Esta especificação suplementar visa complementar o modelo de caso de uso, capturando todos os requisitos de software necessários para a construção do sistema.
 
 ### Escopo
 
-Esse documento engloba os requisitos de todo o sistema que será feito.
+Esse documento engloba os requisitos de todo o sistema que será desenvolvido para o projeto Colmeia CUBO.
 
 ### Definições, Acrônimos e Abreviações
 
@@ -71,74 +64,74 @@ Consultar o [glossário](glossario.md).
 
 ### Referências
 
-Referências sobre como funciona o sistema na [Colmeia Cubo](https://unifil.br/cubo/?gad_source=1&gclid=CjwKCAjwwr6wBhBcEiwAfMEQs4mK5Gn8KfnDKVVKQ3hREByNX-xMn-cLw11YgXeQgpXMniL1ehGcpRoC6LgQAvD_BwE)
-
-[Yggdrasil2](https://akafts.github.io/yggdrasil2/) é um sistema parecido onde estao sendo tirados referências
-
+- [Colmeia CUBO](https://unifil.br/cubo/?gad_source=1&gclid=CjwKCAjwwr6wBhBcEiwAfMEQs4mK5Gn8KfnDKVVKQ3hREByNX-xMn-cLw11YgXeQgpXMniL1ehGcpRoC6LgQAvD_BwE)
+- [Yggdrasil2](https://akafts.github.io/yggdrasil2/) como sistema semelhante.
+- [Documentação Laravel](https://laravel.com/)
+- [Documentação Livewire](https://laravel-livewire.com/docs/2.x/quickstart)
+- [Documentação Tailwind](https://tailwindcss.com/docs)
+- [Honeycomb Design](https://abbekeultjes.nl/honeycomb/)
 
 ### Visão Geral
 
-As sessões a seguir abordam os requisitos cruciais do sistema, fornecendo detalhes que não foram completamente discerníveis apenas pelos diagramas. Incluem funcionalidades essenciais, utilidade para os usuários, garantia de confiabilidade, otimização de desempenho, suporte contínuo, restrições de design, documentação online para usuários, requisitos de assistência do sistema, componentes adquiridos, interfaces, exigências de licenciamento, considerações legais e observações sobre padrões aplicáveis.
+As sessões a seguir abordam os requisitos cruciais do sistema, fornecendo detalhes que não foram completamente descritos apenas pelos diagramas. Incluem funcionalidades essenciais, utilidade para os usuários, garantia de confiabilidade, otimização de desempenho, suporte contínuo, restrições de design, documentação online para usuários, requisitos de assistência do sistema, componentes adquiridos, interfaces, exigências de licenciamento, considerações legais e observações sobre padrões aplicáveis.
 
 ## Funcionalidade
 
-Os requisitos funcionais do projeto estão disponíveis no [diagrama de caso de uso](caso_de_uso.md)
+Os requisitos funcionais do projeto estão disponíveis no [diagrama de caso de uso](caso_de_uso.md).
 
 ## Utilidade
 
 ### Treinamento
 
-Requer pouco nivel de treinamento para o usuario administrativo 
+O sistema requer baixo nível de treinamento para o usuário administrativo.
 
 ## Confiabilidade
 
 ### Disponibilidade
 
-O sistema precisa estar disponivel 24/7.
+O sistema precisa estar disponível 24/7, permitindo acesso contínuo a alunos, professores e coordenadores.
 
 ### Exatidão
 
-Colmeia gerada não pode ter disciplinas que nao fazem parte da area de conhecimento do Cursos
+A estrutura da Colmeia deve garantir que somente as disciplinas pertinentes estejam associadas à área de conhecimento específica do curso selecionado.
 
 ### Taxa de Erros ou Defeitos
 
-- Erro crítico: Perda de informações. 
+- Erro crítico: Perda de informações curriculares, especialmente durante atualizações de dados.
 
 ## Desempenho
 
 ### Capacidade
 
-O sistema precisa ter a capacidade de armazenar uma grande quantidade de informações e dados(COLMEIA) dos usuários e ter a capacidade de permitir atualizacoes downloads de vários usuários utilizando o sistema ao mesmo tempo.
-
+O sistema deve ter a capacidade de armazenar grandes volumes de dados curriculares, permitindo que múltiplos usuários realizem consultas e atualizações simultâneas sem degradação de desempenho.
 
 ## Suportabilidade
 
 ### Padrão de Codificação
 
-- PHP:
-PSR-1 e PSR-2: Para estilo de codificação e padrões de nomenclatura.
-PSR-4: Para autoloading de classes seguindo o modelo MVC do Laravel.
-- JavaScript:
-Airbnb Style Guide: Adotado para convenções de código, incluindo sintaxe e boas práticas.
-ESLint: Utilizado para garantir a qualidade do código e conformidade com o estilo.
-- TypeScript:
-Microsoft TypeScript Guidelines: Para práticas recomendadas e estilo de codificação.
-Prettier: Empregado para formatar o código automaticamente.
+- **PHP**:
+  - PSR-1 e PSR-2: Para estilo de codificação e padrões de nomenclatura.
+  - PSR-4: Para autoloading de classes seguindo o modelo MVC do Laravel.
+- **JavaScript**:
+  - Airbnb Style Guide: Para convenções de código, incluindo sintaxe e boas práticas.
+  - ESLint: Para garantir a qualidade do código e conformidade com o estilo.
+- **TypeScript**:
+  - Microsoft TypeScript Guidelines: Para práticas recomendadas e estilo de codificação.
+  - Prettier: Para formatação automática do código.
 
 ## Restrições de Design
 
 ### Logo e Cores
 
-O Sistema devera seguir o padrão de cores estabelecido pela UniFil, seguindo oque já esta em uso pela COLMEIA CUBO
+O sistema deve seguir o padrão de cores e estilo visual definidos pela UniFil, mantendo a identidade visual atual da Colmeia CUBO.
 
+### Linguagem de Programação
 
-### Liguagem de Programação
-
-O Sistema sera desenvolvido usando [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) e [Laravel](https://laravel.com/) [Laravel LiveWire](https://laravel-livewire.com/) no backend e [Tailwind](https://tailwindcss.com/), no frontend
+O sistema será desenvolvido utilizando [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) e [Laravel](https://laravel.com/) com [Livewire](https://laravel-livewire.com/) no backend, e [Tailwind CSS](https://tailwindcss.com/) no frontend.
 
 ## Documentação do Usuário On-line e Requisitos do Sistema de Ajuda
 
-Toda documentação do projeto sera on-line.
+Toda a documentação do projeto será disponibilizada online, com guias de uso acessíveis para todos os usuários.
 
 ## Componentes Comprados
 
@@ -160,11 +153,11 @@ Não se aplica.
 
 ## Requisitos de Licença
 
-Licença de uso seguindo os protocolos fornecidos pela instituiçao UniFil.
+O sistema seguirá os protocolos de licenciamento estabelecidos pela UniFil.
 
 ## Observações Legais, sobre Direitos Autorais e Outras Observações
 
-O sistema seguira as observações legais de acordo com os padrões da instituição UniFil.
+O sistema seguirá as observações legais conforme os padrões institucionais da UniFil.
 
 ## Padrões Aplicáveis
 

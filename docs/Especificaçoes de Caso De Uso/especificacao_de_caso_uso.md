@@ -8,15 +8,16 @@
 
 ## Índice
 
+- [Especificação de Caso de Uso Gerenciar Cursos](#especificação-de-caso-de-uso-gerenciar-cursos)
   - [Histórico da Revisão](#histórico-da-revisão)
   - [Índice](#índice)
-  - [Breve Descrição](#breve-descrição)
-  - [Indentificação](#identificação])
-  - [Pré Condições](#pré-condições)
-  - [Fluxo Básico de Eventos](#fluxo-básico-de-eventos) 
-  - [Fluxo Principal](#fluxo-principal)
-  - [Pós Condições](#pós-condições)
-  - [Informaçoes Adicionais](#informaçoes-adicionais)
+    - [Breve Descrição:](#breve-descrição)
+    - [Identificação:](#identificação)
+    - [Pré-condições:](#pré-condições)
+    - [Fluxo Básico de Eventos:](#fluxo-básico-de-eventos)
+    - [Fluxo Principal:](#fluxo-principal)
+    - [Pós-condições:](#pós-condições)
+    - [Informaçoes Adicionais](#informaçoes-adicionais)
 
 ### Breve Descrição:
 O caso de uso "Gerenciar Cursos" permite que os orientadores realizem operações de CRUD (Create, Read, Update, Delete) sobre os cursos oferecidos pela instituição, facilitando a organização e atualização do catálogo de cursos.
