@@ -1,30 +1,27 @@
 ```mermaid
-
 flowchart TD
-    subgraph Usuário Regular
+    subgraph "Usuário Regular"
         A[Início] --> B[Selecionar Curso]
         B --> C[Visualizar Informações do Curso]
-        C --> D[Visualizar UCs, ACs e Colmeia]
-        D --> E[Baixar PDF]
+        C --> D[Visualizar Áreas de Conhecimento, Áreas Funcionais e Unidades Curriculares]
+        D --> E[Visualizar Colmeia CUBO]
     end
 
-    subgraph Usuário Administrativo
-        F[Login ADM] --> G{Autenticação ADM Sucessiva?}
+    subgraph "Usuário Administrativo"
+        F[Login Administrativo] --> G{Autenticação Sucessiva?}
         G -->|Sim| H[Acesso ao Painel de Controle]
         G -->|Não| I[Erro: Login Inválido]
         
         H --> J[Gerenciar Cursos]
-        H --> K[Gerenciar Unidades Curriculares]
-        H --> L[Gerenciar Atividades Complementares]
+        H --> K[Gerenciar Áreas de Conhecimento]
+        H --> L[Gerenciar Áreas Funcionais]
+        H --> M[Gerenciar Unidades Curriculares]
 
-        J --> M[Criar, Editar ou Excluir Cursos]
-        K --> N[Criar, Editar ou Excluir UCs]
-        L --> O[Criar, Editar ou Excluir ACs]
+        J --> N[Criar, Editar ou Excluir Cursos]
+        K --> O[Criar, Editar ou Excluir Áreas de Conhecimento]
+        L --> P[Criar, Editar ou Excluir Áreas Funcionais]
+        M --> Q[Criar, Editar ou Excluir Unidades Curriculares]
 
-        M --> P[Editar Colmeia CUBO]
-        P --> Q{Deseja Publicar Colmeia?}
-        Q -->|Sim| R[Publicar CUBO e Gerar Link]
-        Q -->|Não| S[Finalizar Edição]
-
-        R --> T[Fim do Processo ADM]
+        N --> R[Atualizar Colmeia CUBO com Alterações]
+        R --> V[Fim do Processo Administrativo]
     end
