@@ -1,6 +1,9 @@
 # Workflow AS-IS
 
-![WorkflowASIS](img/diagramas/as-is.png)
+
+![alt text](img/diagramas/As-is_Diagram.png)
+
+
 
 [Voltar](readme.md)
 

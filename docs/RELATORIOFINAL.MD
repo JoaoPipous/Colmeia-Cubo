@@ -669,16 +669,11 @@ graph TD
 ```
 
 ## Workflow AS-IS
-```mermaid
-graph TD
-    A[Início] --> B[Login do Coordenador]
-    B --> C[Selecionar Curso]
-    C --> D[Gerenciar Áreas de Conhecimento]
-    D --> E[Gerenciar Áreas Funcionais]
-    E --> F[Gerenciar Unidades Curriculares]
-    F --> G[Finalizar]
+![alt text](img/diagramas/As-is_Diagram.png)
 
-```
+## Workflow TO-BE
+
+![alt text](img/diagramas/BPMN_Diagram.png)
 
 ---
 
