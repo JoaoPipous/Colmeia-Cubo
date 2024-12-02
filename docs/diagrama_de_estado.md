@@ -1,4 +1,4 @@
-## Diagrama de Sequecia
+## Diagrama de Estado
 
 ```mermaid
 stateDiagram-v2
