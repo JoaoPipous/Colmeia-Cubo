@@ -2,9 +2,7 @@
 
 ```mermaid
 classDiagram
-    class Aluno {
-        -Nome: string
-        -CPF: string
+    class Usuario {
         +acessarColmeia(): void
     }
 
@@ -62,4 +60,4 @@ classDiagram
     Coordenador "1" -- "1" AreasDeConhecimento : gerencia
     Coordenador "1" -- "1" AreasFuncionais : gerencia
     Coordenador "1" -- "1" UnidadeCurricular : gerencia
-    Aluno "0..*" -- "1" Curso : acessa
+    Usuario "0..*" -- "1" Curso : acessa

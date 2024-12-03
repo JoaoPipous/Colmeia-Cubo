@@ -16,6 +16,7 @@ erDiagram
         varchar cor
         int duracao
         boolean status
+        int curso_id FK
     }
 
     AREA_FUNCIONAL {
@@ -24,18 +25,21 @@ erDiagram
         varchar descricao
         int duracao
         boolean status
+        int area_conhecimento_id FK
     }
 
     UNIDADE_CURRICULAR {
         int id PK
         varchar nome
         varchar descricao
-        int duracao
+        int carga_horaria
+        boolean status
         int area_funcional_id FK
     }
 
-    CURSO ||--o{ AREA_CONHECIMENTO : gerencia
-    AREA_CONHECIMENTO ||--o{ AREA_FUNCIONAL : define
-    AREA_FUNCIONAL ||--o{ UNIDADE_CURRICULAR : organiza
+    CURSO ||--o{ AREA_CONHECIMENTO : has
+    AREA_CONHECIMENTO ||--o{ AREA_FUNCIONAL : organizes
+    AREA_FUNCIONAL ||--o{ UNIDADE_CURRICULAR : includes
+
 
 ```

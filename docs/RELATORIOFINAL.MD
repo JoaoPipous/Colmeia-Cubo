@@ -8,43 +8,41 @@ Londrina\
 
 ## SUMÁRIO
 
-- [2024](#2024)
-  - [SUMÁRIO](#sumário)
-  - [AGRADECIMENTOS](#agradecimentos)
-  - [INTRODUÇÃO](#introdução)
-  - [DESCRIÇÃO DO SISTEMA](#descrição-do-sistema)
-    - [*FRONT-END*](#front-end)
-    - [*BACK-END*](#back-end)
-    - [BANCO DE DADOS](#banco-de-dados)
-    - [DIAGRAMAÇÃO](#diagramação)
-  - [MODELAGEM DO SISTEMA](#modelagem-do-sistema)
-    - [DIAGRAMA DE CASO DE USO](#diagrama-de-caso-de-uso)
-    - [DIAGRAMA DE CLASSE](#diagrama-de-classe)
-    - [DIAGRAMA DE ENTIDADE E RELACIONAMENTO](#diagrama-de-entidade-e-relacionamento)
-    - [CASOS DE USO](#casos-de-uso)
-      - [UC001\_GERENCIAR\_CURSOS](#uc001_gerenciar_cursos)
-        - [Telas](#telas)
-      - [UC002\_GERENCIAR\_AREAS\_DE\_CONHECIMENTO](#uc002_gerenciar_areas_de_conhecimento)
-        - [Telas](#telas-1)
-      - [UC003\_GERENCIAR\_AREAS\_FUNCIONAIS](#uc003_gerenciar_areas_funcionais)
-        - [Telas](#telas-2)
-  - [CONCLUSÕES E TRABALHOS FUTUROS](#conclusões-e-trabalhos-futuros)
-  - [REFERÊNCIAS](#referências)
-  - [APÊNDICE](#apêndice)
-    - [ARTEFATOS DE REQUISITOS](#artefatos-de-requisitos)
-      - [Documento de visão](#documento-de-visão)
-      - [Especificaçao Suplementar](#especificaçao-suplementar)
-      - [Especificações de Caso de Uso:](#especificações-de-caso-de-uso)
-      - [Glossário](#glossário)
-      - [Pedido do Investidor](#pedido-do-investidor)
-    - [DIAGRAMAS](#diagramas)
-  - [Diagrama de Caso de Uso](#diagrama-de-caso-de-uso-1)
-  - [Diagrama de Classes](#diagrama-de-classes)
-  - [Diagrama de Entidade e Relacionamento](#diagrama-de-entidade-e-relacionamento-1)
-  - [Diagramas de Estado:](#diagramas-de-estado)
-  - [Diagrama de Implantação](#diagrama-de-implantação)
-      - [Diagramas de Sequência:](#diagramas-de-sequência)
+- [AGRADECIMENTOS](#agradecimentos)
+- [INTRODUÇÃO](#introdução)
+- [DESCRIÇÃO DO SISTEMA](#descrição-do-sistema)
+  - [FRONT-END](#front-end)
+  - [BACK-END](#back-end)
+  - [BANCO DE DADOS](#banco-de-dados)
+  - [DIAGRAMAÇÃO](#diagramação)
+- [MODELAGEM DO SISTEMA](#modelagem-do-sistema)
+  - [DIAGRAMA DE CASO DE USO](#diagrama-de-caso-de-uso)
+  - [DIAGRAMA DE CLASSE](#diagrama-de-classe)
+  - [DIAGRAMA DE ENTIDADE E RELACIONAMENTO (DER)](#diagrama-de-entidade-e-relacionamento-der)
+  - [CASOS DE USO](#casos-de-uso)
+    - [UC001 - GERENCIAR CURSOS](#uc001---gerenciar-cursos)
+    - [UC002 - GERENCIAR ÁREAS DE CONHECIMENTO](#uc002---gerenciar-áreas-de-conhecimento)
+    - [UC003 - GERENCIAR ÁREAS FUNCIONAIS](#uc003---gerenciar-áreas-funcionais)
+    - [UC004 - GERENCIAR UNIDADES CURRICULARES](#uc004---gerenciar-unidades-curriculares)
+- [CONCLUSÕES E TRABALHOS FUTUROS](#conclusões-e-trabalhos-futuros)
+- [REFERÊNCIAS](#referências)
+- [APÊNDICE](#apêndice)
+  - [ARTEFATOS DE REQUISITOS](#artefatos-de-requisitos)
+    - [Documento de Visão](#documento-de-visão)
+    - [Especificação Suplementar](#especificação-suplementar)
+    - [Especificações de Caso de Uso](#especificações-de-caso-de-uso)
+    - [Glossário](#glossário)
+    - [Pedido do Investidor](#pedido-do-investidor)
+  - [DIAGRAMAS](#diagramas)
+    - [Diagrama de Caso de Uso](#diagrama-de-caso-de-uso-1)
+    - [Diagrama de Classes](#diagrama-de-classes)
+    - [Diagrama de Entidade e Relacionamento (DER)](#diagrama-de-entidade-e-relacionamento-der-1)
+    - [Diagramas de Estado](#diagramas-de-estado)
+    - [Diagrama de Implantação](#diagrama-de-implantação)
+    - [Diagramas de Sequência](#diagramas-de-sequência)
   - [Workflow AS-IS](#workflow-as-is)
+  - [Workflow TO-BE](#workflow-to-be)
+
 
 ## AGRADECIMENTOS
 
@@ -60,17 +58,23 @@ Por fim, Á Deus e á minha familia e amigos proximos que em momentos dificis do
 
 ## INTRODUÇÃO
 
-O projeto **Colmeia CUBO** foi desenvolvido pelo Núcleo de Práticas em Informática (NPI) do Centro Universitário Filadélfia (UniFil), com o objetivo de digitalizar e centralizar a gestão curricular da instituição. 
+O projeto Colmeia CUBO foi desenvolvido no âmbito do Núcleo de Práticas em Informática (NPI) do Centro Universitário Filadélfia (UniFil), com o objetivo de transformar a gestão curricular da instituição através de uma solução digital inovadora e centralizada. O NPI, atuando como uma Empresa Júnior, se dedica a proporcionar aos alunos experiências práticas que consolidem os conhecimentos teóricos adquiridos em sala de aula, ao mesmo tempo em que atendem a demandas institucionais reais.
 
-O NPI, como uma Empresa Júnior, visa consolidar conhecimentos acadêmicos através de projetos práticos. Este projeto surgiu para facilitar o gerenciamento de cursos, áreas de conhecimento e unidades curriculares, oferecendo uma interface intuitiva e acessível para alunos, orientadores e coordenadores.
+A proposta do Colmeia CUBO surge como uma resposta à complexidade e aos desafios associados à administração manual das estruturas curriculares, que anteriormente eram organizadas utilizando ferramentas convencionais como planilhas e apresentações. Esse método não apenas consumia um tempo significativo de coordenadores e orientadores, mas também dificultava a atualização e o acesso rápido às informações pelos alunos.
+
+Através do Colmeia CUBO, é possível gerenciar, de forma eficiente e dinâmica, os cursos oferecidos pela UniFil, as áreas de conhecimento, áreas funcionais e unidades curriculares. Além disso, a interface intuitiva do sistema permite que alunos visualizem sua estrutura curricular organizada em formato de colmeia, promovendo uma experiência visual clara e interativa.
+
+O projeto também reflete um esforço para automatizar processos, minimizar erros e criar um ambiente acadêmico mais conectado e funcional. Ele integra tecnologias modernas e práticas de desenvolvimento, garantindo que o sistema seja robusto, acessível e adaptado às necessidades dos diferentes usuários, como alunos, professores e coordenadores.
+
+O Colmeia CUBO não apenas moderniza a gestão curricular, mas também contribui para a autonomia dos alunos e a eficiência do trabalho dos coordenadores. Este relatório detalha as etapas de desenvolvimento, as tecnologias empregadas e os desafios superados para a implementação deste projeto, que se tornou um marco na transformação digital da UniFil.
 
 ## DESCRIÇÃO DO SISTEMA
 
 O sistema **Colmeia CUBO** centraliza informações curriculares, proporcionando uma visão clara e organizada da estrutura de cursos. Funciona 24/7 e oferece funcionalidades como:
 
-- **Gerenciamento de Cursos**: Adicionar, atualizar, e remover cursos.
+- **Gerenciamento de Cursos**: Adicionar, atualizar e remover cursos.
 - **Gerenciamento de Áreas de Conhecimento**: Definir e personalizar áreas de conhecimento.
-- **Gerenciamento de Áreas Funcionais**: Adicionar, atualizar, e remover áreas funcionais .
+- **Gerenciamento de Áreas Funcionais**: Adicionar, atualizar e remover áreas funcionais.
 - **Gerenciamento de Unidades Curriculares (UCs)**: Organizar UCs por carga horária e conteúdo.
 - **Visualização da Colmeia Curricular**: Interface de consulta para alunos e professores.
 
@@ -78,29 +82,30 @@ O sistema **Colmeia CUBO** centraliza informações curriculares, proporcionando
 
 Tecnologias utilizadas no *front-end*:
 
-- **HTML5**: Estrutura de conteúdo.
-- **CSS3 (Tailwind CSS)**: Estilização e responsividade.
-- **JavaScript (Alpine.js)**: Adição de interatividade leve.
-- **Livewire**: Componentização de interfaces no Laravel.
+- ***[HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)***: Estrutura de conteúdo.
+- ***[CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)*** (utilizando ***[Tailwind CSS](https://tailwindcss.com/)***): Estilização e responsividade.
+- ***[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)*** (utilizando ***[Alpine.js](https://alpinejs.dev/)***): Adição de interatividade leve.
+- ***[Livewire](https://laravel-livewire.com/)***: Componentização de interfaces no Laravel.
 
 ### *BACK-END*
 
 Tecnologias no *back-end*:
 
-- **Laravel 11**: Framework PHP para lógica de negócios e gerenciamento de dados.
-- **Laravel Sanctum**: Autenticação de usuários para Single Page Applications (SPA).
-- **Livewire**: Para componentização, facilitando a criação de interfaces reativas sem necessidade de uma API separada.
+- ***[Laravel 11](https://laravel.com/)***: Framework PHP para lógica de negócios e gerenciamento de dados.
+- ***[Laravel Sanctum](https://laravel.com/docs/11.x/sanctum)***: Autenticação de usuários para Single Page Applications (SPA).
+- ***[Livewire](https://laravel-livewire.com/)***: Para componentização, facilitando a criação de interfaces reativas sem necessidade de uma API separada.
 
 ### BANCO DE DADOS
 
-- **MySQL**: Sistema de gerenciamento de banco de dados.
+- ***[MySQL](https://www.mysql.com/)***: Sistema de gerenciamento de banco de dados.
 
 ### DIAGRAMAÇÃO
 
 Para a criação dos diagramas, foram utilizadas as ferramentas:
 
-- **draw.io**
-- **Mermaid**
+- ***[draw.io](https://app.diagrams.net/)***
+- ***[Mermaid](https://mermaid.js.org/)***
+
 
 ## MODELAGEM DO SISTEMA
 
@@ -108,143 +113,25 @@ Para a criação dos diagramas, foram utilizadas as ferramentas:
 
 O diagrama de caso de uso detalha os requisitos funcionais do sistema, abordando as interações entre usuários e funcionalidades do sistema **Colmeia CUBO**.
 
+A Figura 1 refere-se ao diagrama de caso de uso do sistema.
+
+Figura 1
+
 ![Diagrama de caso de uso](img/diagramas/casodeuso.png)
 
 ### DIAGRAMA DE CLASSE
 
-O diagrama de classes representa as principais entidades e seus relacionamentos no sistema.
+O diagrama de classes é uma ferramenta essencial na modelagem orientada a objetos, proporcionando uma visão detalhada e estruturada do sistema que é crucial para o desenvolvimento de software eficiente e bem-organizado.
 
-```mermaid
-classDiagram
-    class Aluno {
-        -Nome: string
-        -CPF: string
-        +acessarColmeia(): void
-    }
-
-    class Coordenador {
-        -nome: string
-        -ID: int
-        +gerenciarCursos(): void
-        +gerenciarAreasConhecimento(): void
-        +gerenciarAreasFuncionais(): void
-        +gerenciarUnidadesCurriculares(): void
-    }
-
-    class Curso {
-        -nome: string
-        -codigo: int
-        +adicionarCurso(): void
-        +atualizarCurso(): void
-        +removerCurso(): void
-        +visualizarCurso(): void
-    }
-
-    class AreasDeConhecimento {
-        -titulo: string
-        -descricao: string
-        +adicionarArea(): void
-        +atualizarArea(): void
-        +removerArea(): void
-        +visualizarArea(): void
-    }
-
-    class AreasFuncionais {
-        -nome: string
-        -descricao: string
-        +adicionarAreaFuncional(): void
-        +atualizarAreaFuncional(): void
-        +removerAreaFuncional(): void
-        +visualizarAreaFuncional(): void
-    }
-
-    class UnidadeCurricular {
-        -titulo: string
-        -descricao: string
-        -cargaHoraria: int
-        +adicionarUC(): void
-        +atualizarUC(): void
-        +removerUC(): void
-        +visualizarUC(): void
-    }
-
-    %% Definição das Relações entre as Classes
-    Curso "1" -- "0..*" AreasDeConhecimento : contém
-    AreasDeConhecimento "1" -- "0..*" AreasFuncionais : contém
-    AreasFuncionais "1" -- "0..*" UnidadeCurricular : contém
-    Coordenador "1" -- "1" Curso : gerencia
-    Coordenador "1" -- "1" AreasDeConhecimento : gerencia
-    Coordenador "1" -- "1" AreasFuncionais : gerencia
-    Coordenador "1" -- "1" UnidadeCurricular : gerencia
-    Aluno "0..*" -- "1" Curso : acessa
+[Diagrama de Classes](https://github.com/UniFil-NPI/Colmeia-Cubo/blob/main/docs/diagramadeclasse.md)
 
 
-```
 
+### DIAGRAMA DE ENTIDADE E RELACIONAMENTO (DER)
 
-### DIAGRAMA DE ENTIDADE E RELACIONAMENTO
+O diagrama DER é uma ferramenta crucial na modelagem de dados, permitindo que você visualize e organize as informações de forma estruturada e lógica, o que é essencial para o design e implementação eficaz de sistemas de banco de dados.
 
-```mermaid
-
-    erDiagram
-    CURSO {
-        int codigo PK
-        string nome
-        string descricao
-    }
-    
-    AREAS_DE_CONHECIMENTO {
-        int id PK
-        int curso_id FK
-        string titulo
-        string descricao
-    }
-    
-    AREAS_FUNCIONAIS {
-        int id PK
-        int area_conhecimento_id FK
-        string nome
-        string descricao
-    }
-
-    UNIDADES_CURRICULARES {
-        int id PK
-        int area_funcional_id FK
-        string titulo
-        string descricao
-        int carga_horaria
-    }
-
-    COORDENADOR {
-        int id PK
-        string nome
-    }
-
-    ALUNO {
-        int id PK
-        string nome
-        string cpf
-    }
-
-    COLMEIA {
-        int id PK
-        int aluno_id FK
-        int curso_id FK
-    }
-
-    %% Relacoes
-    CURSO ||--o| AREAS_DE_CONHECIMENTO : contem
-    AREAS_DE_CONHECIMENTO ||--o| AREAS_FUNCIONAIS : contem
-    AREAS_FUNCIONAIS ||--o| UNIDADES_CURRICULARES : contem
-    COORDENADOR ||--o| CURSO : gerencia
-    COORDENADOR ||--o| AREAS_DE_CONHECIMENTO : gerencia
-    COORDENADOR ||--o| AREAS_FUNCIONAIS : gerencia
-    COORDENADOR ||--o| UNIDADES_CURRICULARES : gerencia
-    ALUNO ||--o| COLMEIA : acessa
-    CURSO ||--o| COLMEIA : organiza
-
-
-```
+[Diagrama de Entidade e Relacionamento](https://github.com/UniFil-NPI/Colmeia-Cubo/blob/main/docs/DER.md)
 
 
 ### CASOS DE USO
@@ -303,11 +190,20 @@ O Coordenador pode gerenciar as áreas funcionais, definindo e organizando as UC
 
   ![Tela de Edição de Área Funcional](img/telas/Telas_Relatorio_Final/areas_funcionais/tela_editar.png)
 
-## CONCLUSÕES E TRABALHOS FUTUROS
+### **CONCLUSÕES E TRABALHOS FUTUROS**
 
-O projeto **Colmeia CUBO** atendeu aos requisitos iniciais, proporcionando uma solução digital eficiente para a gestão curricular da UniFil. Durante o desenvolvimento, foram consolidados conhecimentos em Laravel, Livewire e Alpine.js, além da experiência prática com MYSQL para gerenciamento de banco de dados e Git para controle de versão.
+O projeto **Colmeia CUBO** foi uma iniciativa essencial para modernizar e digitalizar a gestão curricular da UniFil, centralizando informações e automatizando processos que anteriormente eram complexos e manuais. Os resultados alcançados foram satisfatórios, atendendo aos requisitos iniciais e proporcionando uma interface intuitiva e eficiente para coordenadores, professores e alunos. A estrutura modular do sistema e o uso de tecnologias modernas garantem sua escalabilidade e flexibilidade.
 
-Para melhorias futuras, sugere-se a implementação de novas funcionalidades, como notificações automáticas para atualização de currículos e integração com outros sistemas acadêmicos. A experiência foi enriquecedora e o sistema desenvolvido contribuirá para a organização e acessibilidade das informações curriculares.
+Durante o desenvolvimento, houve um aprofundamento significativo em tecnologias como **[Laravel](https://laravel.com/)**, **[Livewire](https://laravel-livewire.com/)** e **[Alpine.js](https://alpinejs.dev/)**, que se mostraram ferramentas indispensáveis para a construção de interfaces dinâmicas e reativas. A utilização do **[MySQL](https://www.mysql.com/)** para o gerenciamento de banco de dados consolidou a base sólida de armazenamento e recuperação de informações.
+
+Embora o sistema atenda às demandas atuais, existem possibilidades promissoras para evoluções futuras, como:
+
+- **Notificações Inteligentes**: Automatização de alertas para coordenadores e alunos sobre atualizações curriculares, prazos de atividades e mudanças no sistema.
+- **Integração com Sistemas Acadêmicos Externos**: Conectar o Colmeia CUBO a plataformas como bibliotecas digitais, sistemas de notas e calendários acadêmicos, ampliando sua utilidade.
+- **Relatórios Avançados**: Adicionar módulos para gerar relatórios detalhados sobre desempenho acadêmico, frequência de acessos e outras métricas úteis para tomadas de decisão.
+- **Personalização Avançada**: Possibilitar que coordenadores adaptem o sistema às necessidades específicas de seus cursos e alunos.
+
+Concluímos que o **Colmeia CUBO** será uma ferramenta indispensável para a gestão curricular da UniFil, promovendo eficiência, acessibilidade e organização. O sistema, como um ponto de partida, representa apenas o início de um ecossistema digital acadêmico mais robusto e integrado, com potencial para expandir suas funcionalidades e benefícios para outros contextos educacionais.
 
 ## REFERÊNCIAS
 
@@ -324,7 +220,6 @@ Para melhorias futuras, sugere-se a implementação de novas funcionalidades, co
 
 ####  [Documento de visão](visao.md)
 
-
 #### [Especificaçao Suplementar](especificacao_suplementar.md)
 
 #### Especificações de Caso de Uso: 
@@ -340,340 +235,40 @@ Para melhorias futuras, sugere-se a implementação de novas funcionalidades, co
 
 ### DIAGRAMAS
 
-## Diagrama de Caso de Uso
+ [Diagrama de Caso de Uso](caso_de_uso.md)
 
-```mermaid
-%%{init: {'theme': 'base'}}%%
-graph TD
-    Coordenador --> |Gerenciar Cursos| Curso
-    Coordenador --> |Gerenciar Áreas de Conhecimento| AreaConhecimento
-    Coordenador --> |Gerenciar Áreas Funcionais| AreaFuncional
-    Coordenador --> |Gerenciar Unidades Curriculares| UnidadeCurricular
-    Aluno --> |Visualizar Colmeia| Colmeia
-    Coordenador --> |Acessar Colmeia| Colmeia
+ [Diagrama de Classes](diagramadeclasse.md)
 
-    classDef classStyle fill:#f9f,stroke:#333,stroke-width:2px;
-    Curso:::classStyle
-    AreaConhecimento:::classStyle
-    AreaFuncional:::classStyle
-    UnidadeCurricular:::classStyle
-    Colmeia:::classStyle
-```
- 
-
-## Diagrama de Classes
-
-```mermaid
-
-classDiagram
-    class Curso {
-        +id: Int
-        +nome: String
-        +descricao: String
-        +status: Boolean
-        +index()
-        +create()
-        +store()
-    }
-
-    class AreaConhecimento {
-        +id: Int
-        +nome: String
-        +cor: String
-        +duracao: Int
-        +status: Boolean
-        +index()
-        +create()
-        +store()
-    }
-
-    class AreaFuncional {
-        +id: Int
-        +nome: String
-        +descricao: String
-        +duracao: Int
-        +status: Boolean
-        +index()
-        +create()
-        +store()
-    }
-
-    class UnidadeCurricular {
-        +id: Int
-        +nome: String
-        +descricao: String
-        +duracao: Int
-        +areaFuncional: AreaFuncional
-        +index()
-        +create()
-        +store()
-    }
-
-    Curso "1" -- "0..*" AreaConhecimento : gerencia
-    AreaConhecimento "1" -- "0..*" AreaFuncional : define
-    AreaFuncional "1" -- "0..*" UnidadeCurricular : organiza
-
-```
-
-## Diagrama de Entidade e Relacionamento
-```mermaid
-erDiagram
-    CURSO {
-        int id PK
-        varchar nome
-        varchar descricao
-        boolean status
-    }
-
-    AREA_CONHECIMENTO {
-        int id PK
-        varchar nome
-        varchar cor
-        int duracao
-        boolean status
-    }
-
-    AREA_FUNCIONAL {
-        int id PK
-        varchar nome
-        varchar descricao
-        int duracao
-        boolean status
-    }
-
-    UNIDADE_CURRICULAR {
-        int id PK
-        varchar nome
-        varchar descricao
-        int duracao
-        int area_funcional_id FK
-    }
-
-    CURSO ||--o{ AREA_CONHECIMENTO : gerencia
-    AREA_CONHECIMENTO ||--o{ AREA_FUNCIONAL : define
-    AREA_FUNCIONAL ||--o{ UNIDADE_CURRICULAR : organiza
-
-```
+ [Diagrama de Entidade e Relacionamento](DER.md)
 
 ## Diagramas de Estado:
 
-```mermaid
-stateDiagram-v2
-    [*] --> CriandoCurso : Início do Cadastro de Curso
-    CriandoCurso --> CursoCriado : Curso salvo com sucesso
-    CriandoCurso --> ErroCurso : Falha no cadastro de Curso
+- [UC001_GERENCIAR_CURSOS](<Diagrama de Sequencia/UC001_GERENCIAR_CURSOS.md>)
 
-    CursoCriado --> EditandoCurso : Edição solicitada
-    CursoCriado --> AtivoCurso : Curso publicado
-    AtivoCurso --> InativoCurso : Curso desativado
-    InativoCurso --> AtivoCurso : Curso reativado
-    CursoCriado --> ExcluindoCurso : Excluir curso
-    ExcluindoCurso --> [*] : Curso excluído
+- [UC002_GERENCIAR_AREAS_DE_CONHECIMENTO](<Diagrama de Sequencia/UC002_GERENCIAR_AREAS_DE_CONHECIMENTO.md>)
 
-    [*] --> CriandoAreaConhecimento : Início do Cadastro de Área de Conhecimento
-    CriandoAreaConhecimento --> AreaConhecimentoCriada : Área de Conhecimento salva com sucesso
-    CriandoAreaConhecimento --> ErroAreaConhecimento : Falha no cadastro de Área de Conhecimento
+- [\[UC003_GERENCIAR_AREAS_FUNCIONAIS\]](<Diagrama de Sequencia/UC003_GERENCIAR_AREAS_FUNCIONAIS.md>)
 
-    AreaConhecimentoCriada --> EditandoAreaConhecimento : Edição solicitada
-    AreaConhecimentoCriada --> AtivoAreaConhecimento : Área de Conhecimento publicada
-    AtivoAreaConhecimento --> InativoAreaConhecimento : Área de Conhecimento desativada
-    InativoAreaConhecimento --> AtivoAreaConhecimento : Área de Conhecimento reativada
-    AreaConhecimentoCriada --> ExcluindoAreaConhecimento : Excluir Área de Conhecimento
-    ExcluindoAreaConhecimento --> [*] : Área de Conhecimento excluída
+- [\[UC004_GERENCIAR_UNIDADES_CURRICULARES\]](<Diagrama de Sequencia/UC004_GERENCIAR_UNIDADES_CURRICULARES.md>)
 
-    [*] --> CriandoAreaFuncional : Início do Cadastro de Área Funcional
-    CriandoAreaFuncional --> AreaFuncionalCriada : Área Funcional salva com sucesso
-    CriandoAreaFuncional --> ErroAreaFuncional : Falha no cadastro de Área Funcional
-
-    AreaFuncionalCriada --> EditandoAreaFuncional : Edição solicitada
-    AreaFuncionalCriada --> AtivoAreaFuncional : Área Funcional publicada
-    AtivoAreaFuncional --> InativoAreaFuncional : Área Funcional desativada
-    InativoAreaFuncional --> AtivoAreaFuncional : Área Funcional reativada
-    AreaFuncionalCriada --> ExcluindoAreaFuncional : Excluir Área Funcional
-    ExcluindoAreaFuncional --> [*] : Área Funcional excluída
-
-    [*] --> CriandoUnidadeCurricular : Início do Cadastro de Unidade Curricular
-    CriandoUnidadeCurricular --> UnidadeCurricularCriada : Unidade Curricular salva com sucesso
-    CriandoUnidadeCurricular --> ErroUnidadeCurricular : Falha no cadastro de Unidade Curricular
-
-    UnidadeCurricularCriada --> EditandoUnidadeCurricular : Edição solicitada
-    UnidadeCurricularCriada --> AtivoUnidadeCurricular : Unidade Curricular publicada
-    AtivoUnidadeCurricular --> InativoUnidadeCurricular : Unidade Curricular desativada
-    InativoUnidadeCurricular --> AtivoUnidadeCurricular : Unidade Curricular reativada
-    UnidadeCurricularCriada --> ExcluindoUnidadeCurricular : Excluir Unidade Curricular
-    ExcluindoUnidadeCurricular --> [*] : Unidade Curricular excluída
-
-```
-
-
-## Diagrama de Implantação
-
-```mermaid
-graph TD
-    subgraph "Usuário"
-        browser["Navegador Web"]
-    end
-
-    subgraph "Servidor"
-        backend["Backend (Laravel)"]
-        frontend["Frontend (Livewire + Alpine.js)"]
-        database["Banco de Dados (PostgreSQL)"]
-    end
-
-    subgraph "Servidor do Banco de Dados"
-        storage["Storage (Local/Cloud)"]
-    end
-
-    browser --> frontend["Requisição de Página Web"]
-    frontend --> backend["Requisição de Dados"]
-    backend --> database["Operações CRUD"]
-    backend --> storage["Armazenamento de Arquivos"]
-    backend --> frontend["Comunicação com Frontend via Livewire"]
-```
+### [Diagrama de Implantação](diagrama_de_implementacao.md)
 
 #### Diagramas de Sequência:
 
-- ## [UC001_GERENCIAR_CURSOS]
-- 
-  ```mermaid
-  sequenceDiagram
-    actor Coordenador
-    Coordenador ->> CursosController: acessar página de listagem de cursos
-    CursosController ->> CursosService: obter lista de cursos
-    CursosService ->> Database: consulta de cursos
-    Database -->> CursosService: retorna lista de cursos
-    CursosService -->> CursosController: retorna lista de cursos
-    CursosController -->> Coordenador: exibe lista de cursos
+- [UC001_GERENCIAR_CURSOS](<Diagrama de Sequencia/UC001_GERENCIAR_CURSOS.md>)
 
-    Coordenador ->> CursosController: solicitar criação de novo curso
-    CursosController ->> CursosService: criar curso (dados do novo curso)
-    CursosService ->> Database: inserir novo curso
-    Database -->> CursosService: confirmação de criação
-    CursosService -->> CursosController: confirmação de criação
-    CursosController -->> Coordenador: curso criado com sucesso
+- [UC002_GERENCIAR_AREAS_DE_CONHECIMENTO](<Diagrama de Sequencia/UC002_GERENCIAR_AREAS_DE_CONHECIMENTO.md>)
 
-    Coordenador ->> CursosController: solicitar edição de curso
-    CursosController ->> CursosService: editar curso (dados atualizados)
-    CursosService ->> Database: atualizar curso
-    Database -->> CursosService: confirmação de atualização
-    CursosService -->> CursosController: confirmação de atualização
-    CursosController -->> Coordenador: curso atualizado com sucesso
+- [UC003_GERENCIAR_AREAS_FUNCIONAIS](<Diagrama de Sequencia/UC003_GERENCIAR_AREAS_FUNCIONAIS.md>)
 
-    Coordenador ->> CursosController: solicitar exclusão de curso
-    CursosController ->> CursosService: excluir curso
-    CursosService ->> Database: remover curso
-    Database -->> CursosService: confirmação de remoção
-    CursosService -->> CursosController: confirmação de remoção
-    CursosController -->> Coordenador: curso excluído com sucesso
+- [UC004_GERENCIAR_UNIDADES_CURRICULARES](<Diagrama de Sequencia/UC004_GERENCIAR_UNIDADES_CURRICULARES.md>)
 
-  ```
-- ## [UC002_GERENCIAR_AREAS_DE_CONHECIMENTO]
-```mermaid
-    sequenceDiagram
-    actor Coordenador
-    Coordenador ->> AreasConhecimentoController: acessar página de listagem de áreas de conhecimento
-    AreasConhecimentoController ->> AreasConhecimentoService: obter lista de áreas de conhecimento
-    AreasConhecimentoService ->> Database: consulta de áreas de conhecimento
-    Database -->> AreasConhecimentoService: retorna lista de áreas
-    AreasConhecimentoService -->> AreasConhecimentoController: retorna lista de áreas
-    AreasConhecimentoController -->> Coordenador: exibe lista de áreas de conhecimento
-
-    Coordenador ->> AreasConhecimentoController: solicitar criação de nova área
-    AreasConhecimentoController ->> AreasConhecimentoService: criar área de conhecimento (dados da nova área)
-    AreasConhecimentoService ->> Database: inserir nova área
-    Database -->> AreasConhecimentoService: confirmação de criação
-    AreasConhecimentoService -->> AreasConhecimentoController: confirmação de criação
-    AreasConhecimentoController -->> Coordenador: área de conhecimento criada com sucesso
-
-    Coordenador ->> AreasConhecimentoController: solicitar edição de área de conhecimento
-    AreasConhecimentoController ->> AreasConhecimentoService: editar área (dados atualizados)
-    AreasConhecimentoService ->> Database: atualizar área
-    Database -->> AreasConhecimentoService: confirmação de atualização
-    AreasConhecimentoService -->> AreasConhecimentoController: confirmação de atualização
-    AreasConhecimentoController -->> Coordenador: área de conhecimento atualizada com sucesso
-
-    Coordenador ->> AreasConhecimentoController: solicitar exclusão de área de conhecimento
-    AreasConhecimentoController ->> AreasConhecimentoService: excluir área
-    AreasConhecimentoService ->> Database: remover área
-    Database -->> AreasConhecimentoService: confirmação de remoção
-    AreasConhecimentoService -->> AreasConhecimentoController: confirmação de remoção
-    AreasConhecimentoController -->> Coordenador: área de conhecimento excluída com sucesso
-
-```
-- ## [UC003_GERENCIAR_AREAS_FUNCIONAIS]
-```mermaid
-    sequenceDiagram
-    actor Coordenador
-    Coordenador ->> AreasFuncionaisController: acessar página de listagem de áreas funcionais
-    AreasFuncionaisController ->> AreasFuncionaisService: obter lista de áreas funcionais
-    AreasFuncionaisService ->> Database: consulta de áreas funcionais
-    Database -->> AreasFuncionaisService: retorna lista de áreas funcionais
-    AreasFuncionaisService -->> AreasFuncionaisController: retorna lista de áreas
-    AreasFuncionaisController -->> Coordenador: exibe lista de áreas funcionais
-
-    Coordenador ->> AreasFuncionaisController: solicitar criação de nova área funcional
-    AreasFuncionaisController ->> AreasFuncionaisService: criar área funcional (dados da nova área)
-    AreasFuncionaisService ->> Database: inserir nova área funcional
-    Database -->> AreasFuncionaisService: confirmação de criação
-    AreasFuncionaisService -->> AreasFuncionaisController: confirmação de criação
-    AreasFuncionaisController -->> Coordenador: área funcional criada com sucesso
-
-    Coordenador ->> AreasFuncionaisController: solicitar edição de área funcional
-    AreasFuncionaisController ->> AreasFuncionaisService: editar área funcional (dados atualizados)
-    AreasFuncionaisService ->> Database: atualizar área funcional
-    Database -->> AreasFuncionaisService: confirmação de atualização
-    AreasFuncionaisService -->> AreasFuncionaisController: confirmação de atualização
-    AreasFuncionaisController -->> Coordenador: área funcional atualizada com sucesso
-
-    Coordenador ->> AreasFuncionaisController: solicitar exclusão de área funcional
-    AreasFuncionaisController ->> AreasFuncionaisService: excluir área funcional
-    AreasFuncionaisService ->> Database: remover área funcional
-    Database -->> AreasFuncionaisService: confirmação de remoção
-    AreasFuncionaisService -->> AreasFuncionaisController: confirmação de remoção
-    AreasFuncionaisController -->> Coordenador: área funcional excluída com sucesso 
-```
-- ## [UC004_GERENCIAR_UNIDADES_CURRICULARES]
-
-```mermaid
-    sequenceDiagram
-    actor Coordenador
-    Coordenador ->> UnidadesCurricularesController: acessar página de listagem de UCs
-    UnidadesCurricularesController ->> UnidadesCurricularesService: obter lista de UCs
-    UnidadesCurricularesService ->> Database: consulta de UCs
-    Database -->> UnidadesCurricularesService: retorna lista de UCs
-    UnidadesCurricularesService -->> UnidadesCurricularesController: retorna lista de UCs
-    UnidadesCurricularesController -->> Coordenador: exibe lista de UCs
-
-    Coordenador ->> UnidadesCurricularesController: solicitar criação de nova UC
-    UnidadesCurricularesController ->> UnidadesCurricularesService: criar UC (dados da nova UC)
-    UnidadesCurricularesService ->> Database: inserir nova UC
-    Database -->> UnidadesCurricularesService: confirmação de criação
-    UnidadesCurricularesService -->> UnidadesCurricularesController: confirmação de criação
-    UnidadesCurricularesController -->> Coordenador: UC criada com sucesso
-
-    Coordenador ->> UnidadesCurricularesController: solicitar edição de UC
-    UnidadesCurricularesController ->> UnidadesCurricularesService: editar UC (dados atualizados)
-    UnidadesCurricularesService ->> Database: atualizar UC
-    Database -->> UnidadesCurricularesService: confirmação de atualização
-    UnidadesCurricularesService -->> UnidadesCurricularesController: confirmação de atualização
-    UnidadesCurricularesController -->> Coordenador: UC atualizada com sucesso
-
-    Coordenador ->> UnidadesCurricularesController: solicitar exclusão de UC
-    UnidadesCurricularesController ->> UnidadesCurricularesService: excluir UC
-    UnidadesCurricularesService ->> Database: remover UC
-    Database -->> UnidadesCurricularesService: confirmação de remoção
-    UnidadesCurricularesService -->> UnidadesCurricularesController: confirmação de remoção
-    UnidadesCurricularesController -->> Coordenador: UC excluída com sucesso
+## [Workflow AS-IS](workflow_asis.md)
 
 
-```
+## [Workflow TO-BE](workflow_to_be.md)
 
-## Workflow AS-IS
-![alt text](img/diagramas/As-is_Diagram.png)
 
-## Workflow TO-BE
-
-![alt text](img/diagramas/BPMN_Diagram.png)
 
 ---
 

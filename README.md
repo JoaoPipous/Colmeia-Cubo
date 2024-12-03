@@ -1,6 +1,6 @@
 # Projeto Colmeia CUBO NPI 2024
 
-Desenvolvedor: [João Deliberador](https://github.com/JoaoPipous)
+Orientando: [João Deliberador](https://github.com/JoaoPipous)
 
 Orientador: [mhadaniya](https://github.com/mhadaniya)
 
