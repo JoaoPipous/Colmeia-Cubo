@@ -48,7 +48,7 @@ Londrina\
 
 Gostaria de expressar minha gratidão a todos que contribuíram direta ou indiretamente para a realização deste projeto. 
 
-Agradeço ao meu professor orientador Mario pelo suporte e principalmente pela paciencia na orientação em todas as fases do projeto. Sempre me ajudando á entender cada vez mais do projeto e me ajudando a ser melhor tanto como pessoa mas como proficional 
+Agradeço ao meu professor orientador Mario Henrique Akihiko da Costa Adaniya pelo suporte e principalmente pela paciencia na orientação em todas as fases do projeto. Sempre me ajudando á entender cada vez mais do projeto e me ajudando a ser melhor tanto como pessoa mas como proficional 
 
 Aos colegas que compartilharam conhecimentos e experiências, que enriqueceram meu aprendizado e me incentivaram a seguir em frente.
 
