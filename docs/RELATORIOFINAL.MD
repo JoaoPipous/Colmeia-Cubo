@@ -86,6 +86,8 @@ Tecnologias utilizadas no *front-end*:
 - ***[CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)*** (utilizando ***[Tailwind CSS](https://tailwindcss.com/)***): Estilização e responsividade.
 - ***[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)*** (utilizando ***[Alpine.js](https://alpinejs.dev/)***): Adição de interatividade leve.
 - ***[Livewire](https://laravel-livewire.com/)***: Componentização de interfaces no Laravel.
+- ***[Honeycomb]( https://abbekeultjes.nl/honeycomb/)***: Biblioteca Honeycomb
+
 
 ### *BACK-END*
 
