@@ -1,5 +1,5 @@
 ## Diagrama de Implantação
 
-![Diagrama](img/diagramas/diagramaimplantacao.png)
+![alt text](img/diagramas/DIAGRAMA_DE_IMPLANTACAO.png)
 
 [Voltar](readme.md)
